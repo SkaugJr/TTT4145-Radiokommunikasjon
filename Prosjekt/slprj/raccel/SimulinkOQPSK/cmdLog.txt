@@ -1,0 +1,19 @@
+	---> Registering atexit function
+	---> i18n_init
+	---> Parse Arguments
+	---> sdiInitializeForHostBasedTarget
+	---> Initialize the model
+	---> rsimLoadOptionsFromMATFile
+	---> slsaFreeOPModelData
+	---> rt_FreeParamStructs
+	---> TgtConnTerm
+	---> rtwISigstreamManagerDestroyInstance
+	---> rtwLoggingIntervalDestroyInstance
+	---> rt_RapidReleaseDiagLoggerDB
+	---> rt_RapidFreeGbls
+	---> rtDestroyRevalMgr
+	---> done raccel main
+The argument '-tgtconn_server_info_file' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument 'C:\Users\skaug\AppData\Local\Temp\tgtconnpf0d43f3c_99bf_4045_8e59_09c4cfc02e81.info' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument '-tgtconn_port' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument '0' passed to rtiostream_tcpip is not valid and will be ignored.

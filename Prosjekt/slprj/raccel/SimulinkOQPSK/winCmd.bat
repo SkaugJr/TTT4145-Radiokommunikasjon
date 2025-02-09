@@ -1,0 +1,2 @@
+chcp 65001
+cmd /D /c start "RapidAccelerator" /B "C:\GitHub\TTT4145-Radiokommunikasjon\Prosjekt\slprj\raccel\SimulinkOQPSK\SimulinkOQPSK.exe" --config "C:\Users\skaug\AppData\Local\Temp\raccel_inputpf0d43f3c_99bf_4045_8e59_09c4cfc02e81.cfg" -server_info_file "C:\Users\skaug\AppData\Local\Temp\tppf0d43f3c_99bf_4045_8e59_09c4cfc02e81.info" -tgtconn_server_info_file "C:\Users\skaug\AppData\Local\Temp\tgtconnpf0d43f3c_99bf_4045_8e59_09c4cfc02e81.info" -tgtconn_port 0 -port 0 -verbose off -w 1>"C:\GitHub\TTT4145-Radiokommunikasjon\Prosjekt\slprj\raccel\SimulinkOQPSK\cmdLog.txt"

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_rtp_registry/R2023a">
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="59fce5b7-9513-4647-b76c-537b2511cc9b">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="269d78ad-1012-43ae-a9cf-3523cfc70a00"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="d7bc2d05-1ee3-477e-a16b-10f1b20951ba"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.ModelMetadata type="slsa.mm.rtpregistry.ModelMetadata" uuid="79fe78c3-4b99-4801-ae2b-4cfa115f8e1f">
+    <modelName>SimulinkOQPSK</modelName>
+  </slsa.mm.rtpregistry.ModelMetadata>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="44af2fbb-fe2e-4a9a-9c58-48fc921d86f9">
+    <blockPath>SimulinkOQPSK/OQPSK Modulator Baseband/Pulse shaping/FIR/Pulse shaping</blockPath>
+    <name>FILTER_COEFF</name>
+    <parameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="fc1e430d-10ac-4f79-bdb8-d9ad185cedbb"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.SFunctionParameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="fc1e430d-10ac-4f79-bdb8-d9ad185cedbb">
+    <isInlined>true</isInlined>
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="44af2fbb-fe2e-4a9a-9c58-48fc921d86f9"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b0fd4a75-6486-4f39-8360-5aafed0d8665"/>
+  </slsa.mm.rtpregistry.SFunctionParameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b0fd4a75-6486-4f39-8360-5aafed0d8665">
+    <parameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="fc1e430d-10ac-4f79-bdb8-d9ad185cedbb"/>
+    <valueIndices>11</valueIndices>
+    <valueIndices>14</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.SFunctionParameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="deaa9c33-680a-4238-8ffc-64051d1240f2">
+    <isInlined>true</isInlined>
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="0874b3c2-45b2-4bc4-b784-409a5e96d1e1"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="436c82b6-dfc5-49db-9933-3c369eb42912"/>
+  </slsa.mm.rtpregistry.SFunctionParameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="269d78ad-1012-43ae-a9cf-3523cfc70a00">
+    <blockPath>SimulinkOQPSK/OQPSK Modulator Baseband/Phase offset</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="59fce5b7-9513-4647-b76c-537b2511cc9b"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="d7bc2d05-1ee3-477e-a16b-10f1b20951ba">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="59fce5b7-9513-4647-b76c-537b2511cc9b"/>
+    <valueIndices>16</valueIndices>
+    <valueIndices>16</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="0874b3c2-45b2-4bc4-b784-409a5e96d1e1">
+    <blockPath>SimulinkOQPSK/Raised Cosine Transmit Filter/FIR Interpolation</blockPath>
+    <name>FILTER_COEFF</name>
+    <parameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="deaa9c33-680a-4238-8ffc-64051d1240f2"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="436c82b6-dfc5-49db-9933-3c369eb42912">
+    <parameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="deaa9c33-680a-4238-8ffc-64051d1240f2"/>
+    <valueIndices>17</valueIndices>
+    <valueIndices>56</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.SFunctionParameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="8b5cf9f8-4aac-409f-beb2-4a89499c961e">
+    <isInlined>true</isInlined>
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="3be7ca01-6d74-43c3-9760-73fb4f69d129"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="749fe44d-fe3b-4b7f-8e50-1acc0e08f085"/>
+  </slsa.mm.rtpregistry.SFunctionParameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="3be7ca01-6d74-43c3-9760-73fb4f69d129">
+    <blockPath>SimulinkOQPSK/Raised Cosine Receive Filter/FIR Decimation</blockPath>
+    <name>FILT</name>
+    <parameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="8b5cf9f8-4aac-409f-beb2-4a89499c961e"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="749fe44d-fe3b-4b7f-8e50-1acc0e08f085">
+    <parameter type="slsa.mm.rtpregistry.SFunctionParameter" uuid="8b5cf9f8-4aac-409f-beb2-4a89499c961e"/>
+    <valueIndices>57</valueIndices>
+    <valueIndices>96</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="1a6ad29e-3aab-4ef3-8c9c-f90f99b16f2d">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="37390306-c91d-483a-898b-bf467d02ce73"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="56ef51c3-cac8-4c21-858a-1f134d64432e"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="37390306-c91d-483a-898b-bf467d02ce73">
+    <blockPath>SimulinkOQPSK/Bipolar to Unipolar Converter/Gain1</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="1a6ad29e-3aab-4ef3-8c9c-f90f99b16f2d"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="56ef51c3-cac8-4c21-858a-1f134d64432e">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="1a6ad29e-3aab-4ef3-8c9c-f90f99b16f2d"/>
+    <segmentIndex>1</segmentIndex>
+    <valueIndices>0</valueIndices>
+    <valueIndices>0</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+</MF0>
