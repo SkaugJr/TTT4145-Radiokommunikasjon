@@ -8,7 +8,7 @@ LD = $(CC)
  
 MODEL     = SimulinkOQPSK
 TARGET      = cgxe
-MODULE_SRCS   = m_ydbrxMPHi55Q7lYdpZ3ik.c
+MODULE_SRCS   = m_vyk94dRgB2zcdSb8CoDOo.c m_zrIE4lRjxJ68ofdsvR86sF.c m_IsGNysfWLj549u5AgrrhmC.c
 MODEL_SRC  = SimulinkOQPSK_cgxe.c
 MODEL_REG = SimulinkOQPSK_cgxe_registry.c
 MAKEFILE    = SimulinkOQPSK_cgxe.gmk
@@ -43,7 +43,7 @@ LDFLAGS =
 AUXLDFLAGS = 
 #----------------------------- Source Files -----------------------------------
  
-THIRD_PARTY_SRCS =   
+THIRD_PARTY_SRCS = C:/GitHub/TTT414~1/Prosjekt/slprj/_cgxe/SIMULI~1/src/signLib.c  
 REQ_SRCS  = $(MODEL_SRC) $(MODEL_REG) $(MODULE_SRCS) $(THIRD_PARTY_SRCS) 
 
 USER_OBJS =
