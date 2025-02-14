@@ -1,7 +1,7 @@
 /* Include files */
 
 #include "modelInterface.h"
-#include "m_vyk94dRgB2zcdSb8CoDOo.h"
+#include "m_L4FxDF8PMmLMazYl7DbTvE.h"
 #include <string.h>
 #include "mwmathutil.h"
 
@@ -14,32 +14,32 @@
 /* Variable Definitions */
 static emlrtRSInfo emlrtRSI = { 1,     /* lineNo */
   "AWGNChannel",                       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
 };
 
 static emlrtRSInfo b_emlrtRSI = { 160, /* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
 static emlrtRSInfo c_emlrtRSI = { 1,   /* lineNo */
   "Helper",                            /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\compiled\\+comm\\+internal\\Helper.p"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\compiled\\+comm\\+internal\\Helper.p"/* pathName */
 };
 
 static emlrtRSInfo d_emlrtRSI = { 1,   /* lineNo */
   "System",                            /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\System.p"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\System.p"/* pathName */
 };
 
 static emlrtRSInfo e_emlrtRSI = { 1,   /* lineNo */
   "SystemProp",                        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemProp.p"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemProp.p"/* pathName */
 };
 
 static emlrtRSInfo f_emlrtRSI = { 1,   /* lineNo */
   "SystemCore",                        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pathName */
 };
 
 static emlrtRSInfo g_emlrtRSI = { 13,  /* lineNo */
@@ -64,409 +64,336 @@ static emlrtRSInfo j_emlrtRSI = { 33,  /* lineNo */
 
 static emlrtRSInfo k_emlrtRSI = { 165, /* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
 static emlrtRSInfo l_emlrtRSI = { 93,  /* lineNo */
   "validateattributes",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\lang\\validateattributes.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\lang\\validateattributes.m"/* pathName */
 };
 
 static emlrtRSInfo m_emlrtRSI = { 190, /* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
 static emlrtRSInfo n_emlrtRSI = { 317, /* lineNo */
   "AWGNChannel",                       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
 };
 
 static emlrtRSInfo o_emlrtRSI = { 324, /* lineNo */
   "AWGNChannel",                       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
 };
 
 static emlrtRSInfo p_emlrtRSI = { 334, /* lineNo */
   "AWGNChannel",                       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
 };
 
 static emlrtRSInfo q_emlrtRSI = { 464, /* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
 static emlrtRSInfo r_emlrtRSI = { 232, /* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
 static emlrtRSInfo s_emlrtRSI = { 132, /* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
 static emlrtRSInfo t_emlrtRSI = { 135, /* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
 static emlrtRSInfo u_emlrtRSI = { 137, /* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
 static emlrtRSInfo v_emlrtRSI = { 139, /* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
 static emlrtRSInfo w_emlrtRSI = { 282, /* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
 static emlrtRSInfo x_emlrtRSI = { 284, /* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
 static emlrtRSInfo y_emlrtRSI = { 286, /* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
 static emlrtRSInfo ab_emlrtRSI = { 287,/* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
-static emlrtRSInfo bb_emlrtRSI = { 45, /* lineNo */
-  "eml_rand_mt19937ar_stateful",       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_mt19937ar_stateful.m"/* pathName */
-};
-
-static emlrtRSInfo cb_emlrtRSI = { 69, /* lineNo */
-  "eml_rand_mt19937ar",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pathName */
-};
-
-static emlrtRSInfo db_emlrtRSI = { 19, /* lineNo */
-  "eml_rand_mcg16807_stateful",        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_mcg16807_stateful.m"/* pathName */
-};
-
-static emlrtRSInfo eb_emlrtRSI = { 49, /* lineNo */
-  "eml_rand_mcg16807",                 /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_mcg16807.m"/* pathName */
-};
-
-static emlrtRSInfo fb_emlrtRSI = { 35, /* lineNo */
+static emlrtRSInfo bb_emlrtRSI = { 35, /* lineNo */
   "",                                  /* fcnName */
   ""                                   /* pathName */
 };
 
-static emlrtRSInfo gb_emlrtRSI = { 41, /* lineNo */
+static emlrtRSInfo cb_emlrtRSI = { 41, /* lineNo */
   "",                                  /* fcnName */
   ""                                   /* pathName */
 };
 
-static emlrtRSInfo hb_emlrtRSI = { 50, /* lineNo */
+static emlrtRSInfo db_emlrtRSI = { 50, /* lineNo */
   "",                                  /* fcnName */
   ""                                   /* pathName */
 };
 
-static emlrtRSInfo ib_emlrtRSI = { 58, /* lineNo */
+static emlrtRSInfo eb_emlrtRSI = { 58, /* lineNo */
   "",                                  /* fcnName */
   ""                                   /* pathName */
 };
 
-static emlrtRSInfo jb_emlrtRSI = { 407,/* lineNo */
+static emlrtRSInfo fb_emlrtRSI = { 407,/* lineNo */
   "AWGNChannel",                       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
 };
 
-static emlrtRSInfo kb_emlrtRSI = { 345,/* lineNo */
+static emlrtRSInfo gb_emlrtRSI = { 345,/* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
-static emlrtRSInfo lb_emlrtRSI = { 308,/* lineNo */
+static emlrtRSInfo hb_emlrtRSI = { 308,/* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
-static emlrtRSInfo mb_emlrtRSI = { 247,/* lineNo */
+static emlrtRSInfo ib_emlrtRSI = { 247,/* lineNo */
   "AWGNChannel",                       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannel.m"/* pathName */
 };
 
-static emlrtRSInfo nb_emlrtRSI = { 108,/* lineNo */
+static emlrtRSInfo jb_emlrtRSI = { 108,/* lineNo */
   "randn",                             /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\randn.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\randn.m"/* pathName */
 };
 
-static emlrtRSInfo ob_emlrtRSI = { 134,/* lineNo */
+static emlrtRSInfo kb_emlrtRSI = { 134,/* lineNo */
   "randn",                             /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\randn.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\randn.m"/* pathName */
 };
 
-static emlrtRSInfo pb_emlrtRSI = { 40, /* lineNo */
+static emlrtRSInfo lb_emlrtRSI = { 40, /* lineNo */
   "eml_randn",                         /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_randn.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_randn.m"/* pathName */
 };
 
-static emlrtRSInfo qb_emlrtRSI = { 61, /* lineNo */
-  "eml_randn",                         /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_randn.m"/* pathName */
-};
-
-static emlrtRSInfo rb_emlrtRSI = { 62, /* lineNo */
-  "eml_randn",                         /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_randn.m"/* pathName */
-};
-
-static emlrtRSInfo sb_emlrtRSI = { 41, /* lineNo */
+static emlrtRSInfo mb_emlrtRSI = { 41, /* lineNo */
   "eml_rand",                          /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand.m"/* pathName */
 };
 
-static emlrtRSInfo tb_emlrtRSI = { 43, /* lineNo */
+static emlrtRSInfo nb_emlrtRSI = { 43, /* lineNo */
   "eml_rand",                          /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand.m"/* pathName */
 };
 
-static emlrtRSInfo ub_emlrtRSI = { 45, /* lineNo */
+static emlrtRSInfo ob_emlrtRSI = { 45, /* lineNo */
   "eml_rand",                          /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand.m"/* pathName */
 };
 
-static emlrtRSInfo vb_emlrtRSI = { 31, /* lineNo */
-  "eml_rand_shr3cong_stateful",        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_shr3cong_stateful.m"/* pathName */
-};
-
-static emlrtRSInfo wb_emlrtRSI = { 32, /* lineNo */
-  "eml_rand_shr3cong_stateful",        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_shr3cong_stateful.m"/* pathName */
-};
-
-static emlrtRSInfo xb_emlrtRSI = { 34, /* lineNo */
-  "eml_rand_shr3cong",                 /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_shr3cong.m"/* pathName */
-};
-
-static emlrtRSInfo yb_emlrtRSI = { 125,/* lineNo */
-  "eml_rand_shr3cong",                 /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_shr3cong.m"/* pathName */
-};
-
-static emlrtRSInfo ac_emlrtRSI = { 136,/* lineNo */
-  "eml_rand_shr3cong",                 /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_shr3cong.m"/* pathName */
-};
-
-static emlrtRSInfo bc_emlrtRSI = { 160,/* lineNo */
-  "eml_rand_shr3cong",                 /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_shr3cong.m"/* pathName */
-};
-
-static emlrtRSInfo cc_emlrtRSI = { 163,/* lineNo */
-  "eml_rand_shr3cong",                 /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_shr3cong.m"/* pathName */
-};
-
-static emlrtRSInfo dc_emlrtRSI = { 31, /* lineNo */
+static emlrtRSInfo pb_emlrtRSI = { 31, /* lineNo */
   "eml_rand_mt19937ar_stateful",       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_mt19937ar_stateful.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_mt19937ar_stateful.m"/* pathName */
 };
 
-static emlrtRSInfo ec_emlrtRSI = { 32, /* lineNo */
+static emlrtRSInfo qb_emlrtRSI = { 32, /* lineNo */
   "eml_rand_mt19937ar_stateful",       /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_mt19937ar_stateful.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\private\\eml_rand_mt19937ar_stateful.m"/* pathName */
 };
 
-static emlrtRSInfo fc_emlrtRSI = { 56, /* lineNo */
+static emlrtRSInfo rb_emlrtRSI = { 56, /* lineNo */
   "eml_rand_mt19937ar",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+randfun\\eml_rand_mt19937ar.m"/* pathName */
 };
 
-static emlrtRSInfo gc_emlrtRSI = { 418,/* lineNo */
+static emlrtRSInfo sb_emlrtRSI = { 405,/* lineNo */
   "eml_rand_mt19937ar",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+randfun\\eml_rand_mt19937ar.m"/* pathName */
 };
 
-static emlrtRSInfo hc_emlrtRSI = { 436,/* lineNo */
+static emlrtRSInfo tb_emlrtRSI = { 414,/* lineNo */
   "eml_rand_mt19937ar",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+randfun\\eml_rand_mt19937ar.m"/* pathName */
 };
 
-static emlrtRSInfo ic_emlrtRSI = { 445,/* lineNo */
+static emlrtRSInfo ub_emlrtRSI = { 416,/* lineNo */
   "eml_rand_mt19937ar",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pathName */
-};
-
-static emlrtRSInfo jc_emlrtRSI = { 447,/* lineNo */
-  "eml_rand_mt19937ar",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pathName */
-};
-
-static emlrtRSInfo kc_emlrtRSI = { 149,/* lineNo */
-  "eml_rand_mt19937ar",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+randfun\\eml_rand_mt19937ar.m"/* pathName */
 };
 
 static emlrtMCInfo emlrtMCI = { 14,    /* lineNo */
   37,                                  /* colNo */
   "validatenonnan",                    /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnan.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnan.m"/* pName */
 };
 
 static emlrtMCInfo b_emlrtMCI = { 14,  /* lineNo */
   37,                                  /* colNo */
   "validatepositive",                  /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatepositive.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatepositive.m"/* pName */
 };
 
 static emlrtMCInfo c_emlrtMCI = { 14,  /* lineNo */
   37,                                  /* colNo */
   "validatefinite",                    /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatefinite.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatefinite.m"/* pName */
 };
 
 static emlrtMCInfo d_emlrtMCI = { 1,   /* lineNo */
   1,                                   /* colNo */
   "SystemCore",                        /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pName */
 };
 
 static emlrtMCInfo e_emlrtMCI = { 13,  /* lineNo */
   37,                                  /* colNo */
   "validateinteger",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validateinteger.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validateinteger.m"/* pName */
 };
 
 static emlrtMCInfo f_emlrtMCI = { 14,  /* lineNo */
   37,                                  /* colNo */
   "validatenonnegative",               /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnegative.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnegative.m"/* pName */
 };
 
 static emlrtMCInfo g_emlrtMCI = { 82,  /* lineNo */
   5,                                   /* colNo */
   "power",                             /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\ops\\power.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\ops\\power.m"/* pName */
 };
 
 static emlrtMCInfo h_emlrtMCI = { 13,  /* lineNo */
   9,                                   /* colNo */
   "sqrt",                              /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\elfun\\sqrt.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\elfun\\sqrt.m"/* pName */
 };
 
 static emlrtMCInfo i_emlrtMCI = { 237, /* lineNo */
   9,                                   /* colNo */
   "AWGNChannelBase",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pName */
 };
 
 static emlrtMCInfo j_emlrtMCI = { 141, /* lineNo */
   13,                                  /* colNo */
   "rng",                               /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pName */
 };
 
 static emlrtMCInfo k_emlrtMCI = { 286, /* lineNo */
   13,                                  /* colNo */
   "AWGNChannelBase",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pName */
 };
 
 static emlrtMCInfo l_emlrtMCI = { 293, /* lineNo */
   13,                                  /* colNo */
   "AWGNChannelBase",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pName */
 };
 
-static emlrtMCInfo m_emlrtMCI = { 156, /* lineNo */
-  17,                                  /* colNo */
+static emlrtMCInfo m_emlrtMCI = { 125, /* lineNo */
+  13,                                  /* colNo */
   "eml_rand_mt19937ar",                /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+randfun\\eml_rand_mt19937ar.m"/* pName */
 };
 
-static emlrtRSInfo lc_emlrtRSI = { 13, /* lineNo */
+static emlrtRSInfo vb_emlrtRSI = { 13, /* lineNo */
   "sqrt",                              /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\elfun\\sqrt.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\elfun\\sqrt.m"/* pathName */
 };
 
-static emlrtRSInfo mc_emlrtRSI = { 14, /* lineNo */
+static emlrtRSInfo wb_emlrtRSI = { 14, /* lineNo */
   "validatefinite",                    /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatefinite.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatefinite.m"/* pathName */
 };
 
-static emlrtRSInfo nc_emlrtRSI = { 14, /* lineNo */
+static emlrtRSInfo xb_emlrtRSI = { 14, /* lineNo */
   "validatenonnegative",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnegative.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnegative.m"/* pathName */
 };
 
-static emlrtRSInfo oc_emlrtRSI = { 13, /* lineNo */
+static emlrtRSInfo yb_emlrtRSI = { 13, /* lineNo */
   "validateinteger",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validateinteger.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validateinteger.m"/* pathName */
 };
 
-static emlrtRSInfo pc_emlrtRSI = { 14, /* lineNo */
+static emlrtRSInfo ac_emlrtRSI = { 14, /* lineNo */
   "validatenonnan",                    /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnan.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnan.m"/* pathName */
 };
 
-static emlrtRSInfo qc_emlrtRSI = { 14, /* lineNo */
+static emlrtRSInfo bc_emlrtRSI = { 14, /* lineNo */
   "validatepositive",                  /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatepositive.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatepositive.m"/* pathName */
 };
 
-static emlrtRSInfo rc_emlrtRSI = { 156,/* lineNo */
+static emlrtRSInfo cc_emlrtRSI = { 125,/* lineNo */
   "eml_rand_mt19937ar",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\eml_rand_mt19937ar.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+randfun\\eml_rand_mt19937ar.m"/* pathName */
 };
 
-static emlrtRSInfo sc_emlrtRSI = { 286,/* lineNo */
+static emlrtRSInfo dc_emlrtRSI = { 286,/* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
-static emlrtRSInfo tc_emlrtRSI = { 293,/* lineNo */
+static emlrtRSInfo ec_emlrtRSI = { 293,/* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
-static emlrtRSInfo uc_emlrtRSI = { 141,/* lineNo */
+static emlrtRSInfo fc_emlrtRSI = { 141,/* lineNo */
   "rng",                               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\randfun\\rng.m"/* pathName */
 };
 
-static emlrtRSInfo vc_emlrtRSI = { 237,/* lineNo */
+static emlrtRSInfo gc_emlrtRSI = { 237,/* lineNo */
   "AWGNChannelBase",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\AWGNChannelBase.m"/* pathName */
 };
 
 /* Function Declarations */
-static void cgxe_mdl_start(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance);
-static void cgxe_mdl_initialize(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_start(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance);
+static void cgxe_mdl_initialize(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance);
-static void cgxe_mdl_outputs(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_outputs(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance);
-static void cgxe_mdl_update(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance);
-static void cgxe_mdl_derivative(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_update(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance);
-static void cgxe_mdl_enable(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance);
-static void cgxe_mdl_disable(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_derivative(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance);
-static void cgxe_mdl_terminate(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_enable(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance);
-static void mw__internal__system__init__fcn(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_disable(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance);
-static void mw__internal__call__setup(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_terminate(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance);
+static void mw__internal__system__init__fcn
+  (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance);
+static void mw__internal__call__setup(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, real_T EbNo, real_T SignalPower);
 static comm_internal_AWGNChannel *AWGNChannel_AWGNChannel
   (comm_internal_AWGNChannel *obj);
@@ -480,35 +407,35 @@ static void AWGNChannelBase_getStandardDeviation(const emlrtStack *sp,
   comm_internal_AWGNChannel *obj);
 static void AWGNChannelBase_setupImpl(const emlrtStack *sp,
   comm_internal_AWGNChannel *obj);
-static void rng(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance, const
+static void rng(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance, const
                 emlrtStack *sp);
 static real_T now(void);
 static real_T b_mod(real_T x);
 static void SystemCore_checkTunablePropChange(const emlrtStack *sp,
   comm_internal_AWGNChannel *obj);
-static void mw__internal__call__reset(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void mw__internal__call__reset(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, real_T EbNo, real_T SignalPower);
-static void mw__internal__call__step(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void mw__internal__call__step(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, real_T EbNo, real_T SignalPower,
-  creal_T b_u0[704], creal_T c_y0[704]);
-static void AWGNChannelBase_stepImpl(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+  creal_T b_u0[528], creal_T c_y0[528]);
+static void AWGNChannelBase_stepImpl(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, comm_internal_AWGNChannel *obj, creal_T
-  x[704], creal_T y[704]);
-static void complexLike(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance,
-  const emlrtStack *sp, creal_T r[704]);
-static void eml_rand_mcg16807_stateful(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
-  *moduleInstance, creal_T r[704]);
+  x[528], creal_T y[528]);
+static void complexLike(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance,
+  const emlrtStack *sp, creal_T r[528]);
+static void eml_rand_mcg16807_stateful(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance, creal_T r[528]);
 static void genrandu(uint32_T s, uint32_T *e_state, real_T *r);
-static void eml_rand_shr3cong_stateful(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
-  *moduleInstance, creal_T r[704]);
-static void eml_rand_mt19937ar_stateful(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
-  *moduleInstance, const emlrtStack *sp, creal_T r[704]);
-static const mxArray *emlrt_marshallOut(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void eml_rand_shr3cong_stateful(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance, creal_T r[528]);
+static void eml_rand_mt19937ar_stateful(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance, const emlrtStack *sp, creal_T r[528]);
+static const mxArray *emlrt_marshallOut(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance);
 static const mxArray *b_emlrt_marshallOut(const uint32_T u[2]);
 static const mxArray *cgxe_mdl_get_sim_state
-  (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance);
-static void emlrt_marshallIn(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+  (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance);
+static void emlrt_marshallIn(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, const mxArray *u);
 static uint32_T b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
   const char_T *identifier);
@@ -538,7 +465,7 @@ static void n_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId, uint32_T y[8]);
 static real_T o_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId);
-static void cgxe_mdl_set_sim_state(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_set_sim_state(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const mxArray *st);
 static const mxArray *message(const emlrtStack *sp, const mxArray *m1, const
   mxArray *m2, emlrtMCInfo *location);
@@ -566,11 +493,11 @@ static real_T genrandn(uint32_T e_state[2]);
 static real_T eml_rand_mt19937ar(const emlrtStack *sp, uint32_T e_state[625]);
 static void genrand_uint32_vector(uint32_T mt[625], uint32_T u[2]);
 static real_T b_genrandu(const emlrtStack *sp, uint32_T mt[625]);
-static void init_simulink_io_address(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void init_simulink_io_address(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance);
 
 /* Function Definitions */
-static void cgxe_mdl_start(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance)
+static void cgxe_mdl_start(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
     NULL,                              /* tls */
@@ -589,7 +516,7 @@ static void cgxe_mdl_start(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance)
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_initialize(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_initialize(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
@@ -609,7 +536,7 @@ static void cgxe_mdl_initialize(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_outputs(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_outputs(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
@@ -628,37 +555,39 @@ static void cgxe_mdl_outputs(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_update(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance)
-{
-  (void)moduleInstance;
-}
-
-static void cgxe_mdl_derivative(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_update(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance)
 {
   (void)moduleInstance;
 }
 
-static void cgxe_mdl_enable(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance)
-{
-  (void)moduleInstance;
-}
-
-static void cgxe_mdl_disable(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_derivative(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance)
 {
   (void)moduleInstance;
 }
 
-static void cgxe_mdl_terminate(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_enable(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance)
+{
+  (void)moduleInstance;
+}
+
+static void cgxe_mdl_disable(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance)
+{
+  (void)moduleInstance;
+}
+
+static void cgxe_mdl_terminate(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance)
 {
   cgxertSetGcb(moduleInstance->S, -1, -1);
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void mw__internal__system__init__fcn(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
-  *moduleInstance)
+static void mw__internal__system__init__fcn
+  (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance)
 {
   static uint32_T uv[625] = { 5489U, 1301868182U, 2938499221U, 2950281878U,
     1875628136U, 751856242U, 944701696U, 2243192071U, 694061057U, 219885934U,
@@ -799,7 +728,7 @@ static void mw__internal__system__init__fcn(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   moduleInstance->d_state_not_empty = true;
 }
 
-static void mw__internal__call__setup(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void mw__internal__call__setup(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, real_T EbNo, real_T SignalPower)
 {
   static const int32_T iv[2] = { 1, 51 };
@@ -808,7 +737,7 @@ static void mw__internal__call__setup(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
 
   static const int32_T iv3[2] = { 1, 5 };
 
-  static int16_T iv1[8] = { 704, 1, 1, 1, 1, 1, 1, 1 };
+  static int16_T iv1[8] = { 528, 1, 1, 1, 1, 1, 1, 1 };
 
   static char_T b_u[51] = { 'M', 'A', 'T', 'L', 'A', 'B', ':', 's', 'y', 's',
     't', 'e', 'm', ':', 'm', 'e', 't', 'h', 'o', 'd', 'C', 'a', 'l', 'l', 'e',
@@ -1001,7 +930,7 @@ static void AWGNChannelBase_set_EbNo(const emlrtStack *sp,
     m = emlrtCreateCharArray(2, &iv2[0]);
     emlrtInitCharArrayR2013a(&b_st, 4, m, &e_u[0]);
     emlrtAssign(&c_y, m);
-    c_st.site = &pc_emlrtRSI;
+    c_st.site = &ac_emlrtRSI;
     error(&c_st, y, getString(&c_st, message(&c_st, b_y, c_y, &emlrtMCI),
            &emlrtMCI), &emlrtMCI);
   }
@@ -1115,7 +1044,7 @@ static void AWGNChannelBase_set_SignalPower(const emlrtStack *sp,
     m = emlrtCreateCharArray(2, &iv5[0]);
     emlrtInitCharArrayR2013a(&b_st, 11, m, &h_u[0]);
     emlrtAssign(&f_y, m);
-    c_st.site = &qc_emlrtRSI;
+    c_st.site = &bc_emlrtRSI;
     error(&c_st, y, getString(&c_st, message(&c_st, c_y, f_y, &b_emlrtMCI),
            &b_emlrtMCI), &b_emlrtMCI);
   }
@@ -1151,7 +1080,7 @@ static void AWGNChannelBase_set_SignalPower(const emlrtStack *sp,
     m = emlrtCreateCharArray(2, &iv7[0]);
     emlrtInitCharArrayR2013a(&b_st, 11, m, &h_u[0]);
     emlrtAssign(&h_y, m);
-    c_st.site = &pc_emlrtRSI;
+    c_st.site = &ac_emlrtRSI;
     error(&c_st, b_y, getString(&c_st, message(&c_st, e_y, h_y, &emlrtMCI),
            &emlrtMCI), &emlrtMCI);
   }
@@ -1187,7 +1116,7 @@ static void AWGNChannelBase_set_SignalPower(const emlrtStack *sp,
     m = emlrtCreateCharArray(2, &iv8[0]);
     emlrtInitCharArrayR2013a(&b_st, 11, m, &h_u[0]);
     emlrtAssign(&i_y, m);
-    c_st.site = &mc_emlrtRSI;
+    c_st.site = &wb_emlrtRSI;
     error(&c_st, d_y, getString(&c_st, message(&c_st, g_y, i_y, &c_emlrtMCI),
            &c_emlrtMCI), &c_emlrtMCI);
   }
@@ -1306,7 +1235,7 @@ static void validateattributes(const emlrtStack *sp, real_T a)
     m = emlrtCreateCharArray(2, &iv5[0]);
     emlrtInitCharArrayR2013a(&st, 4, m, &i_u[0]);
     emlrtAssign(&f_y, m);
-    b_st.site = &oc_emlrtRSI;
+    b_st.site = &yb_emlrtRSI;
     error(&b_st, y, getString(&b_st, message(&b_st, c_y, f_y, &e_emlrtMCI),
            &e_emlrtMCI), &e_emlrtMCI);
   }
@@ -1342,7 +1271,7 @@ static void validateattributes(const emlrtStack *sp, real_T a)
     m = emlrtCreateCharArray(2, &iv7[0]);
     emlrtInitCharArrayR2013a(&st, 4, m, &i_u[0]);
     emlrtAssign(&h_y, m);
-    b_st.site = &nc_emlrtRSI;
+    b_st.site = &xb_emlrtRSI;
     error(&b_st, b_y, getString(&b_st, message(&b_st, e_y, h_y, &f_emlrtMCI),
            &f_emlrtMCI), &f_emlrtMCI);
   }
@@ -1378,7 +1307,7 @@ static void validateattributes(const emlrtStack *sp, real_T a)
     m = emlrtCreateCharArray(2, &iv8[0]);
     emlrtInitCharArrayR2013a(&st, 4, m, &i_u[0]);
     emlrtAssign(&i_y, m);
-    b_st.site = &mc_emlrtRSI;
+    b_st.site = &wb_emlrtRSI;
     error(&b_st, d_y, getString(&b_st, message(&b_st, g_y, i_y, &c_emlrtMCI),
            &c_emlrtMCI), &c_emlrtMCI);
   }
@@ -1451,7 +1380,7 @@ static void AWGNChannelBase_getStandardDeviation(const emlrtStack *sp,
   b_st.tls = st.tls;
   b = obj->EbNo / 10.0;
   st.site = &q_emlrtRSI;
-  b = obj->SignalPower * 2.0 / (muDoubleScalarPower(10.0, b) * 2.0);
+  b = obj->SignalPower * 12.0 / (muDoubleScalarPower(10.0, b) * 2.0);
   if (b < 0.0) {
     for (i = 0; i < 30; i++) {
       u[i] = b_u[i];
@@ -1477,7 +1406,7 @@ static void AWGNChannelBase_getStandardDeviation(const emlrtStack *sp,
     m = emlrtCreateCharArray(2, &iv2[0]);
     emlrtInitCharArrayR2013a(&st, 4, m, &c_u[0]);
     emlrtAssign(&c_y, m);
-    b_st.site = &lc_emlrtRSI;
+    b_st.site = &vb_emlrtRSI;
     error(&b_st, y, getString(&b_st, message(&b_st, b_y, c_y, &h_emlrtMCI),
            &h_emlrtMCI), &h_emlrtMCI);
   }
@@ -1531,7 +1460,7 @@ static void AWGNChannelBase_setupImpl(const emlrtStack *sp,
     m = emlrtCreateCharArray(2, &iv1[0]);
     emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 49, m, &u[0]);
     emlrtAssign(&b_y, m);
-    st.site = &vc_emlrtRSI;
+    st.site = &gc_emlrtRSI;
     error(&st, y, getString(&st, b_message(&st, b_y, &i_emlrtMCI), &i_emlrtMCI),
           &i_emlrtMCI);
   }
@@ -1540,7 +1469,7 @@ static void AWGNChannelBase_setupImpl(const emlrtStack *sp,
   obj->pIsVarChannel = false;
 }
 
-static void rng(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance, const
+static void rng(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance, const
                 emlrtStack *sp)
 {
   static const int32_T iv[2] = { 1, 22 };
@@ -1553,17 +1482,16 @@ static void rng(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance, const
   time_t b_eTime;
   time_t eTime;
   emlrtStack b_st;
-  emlrtStack c_st;
   emlrtStack st;
   const mxArray *b_y;
   const mxArray *m;
   const mxArray *y;
   real_T s;
   real_T x;
+  int32_T b_r;
   int32_T exitg1;
-  int32_T r;
   int32_T t;
-  uint32_T b_r;
+  uint32_T r;
   char_T u[22];
   st.prev = sp;
   st.tls = sp->tls;
@@ -1603,13 +1531,11 @@ static void rng(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance, const
 
   if (moduleInstance->method == 7U) {
     st.site = &t_emlrtRSI;
-    b_st.site = &bb_emlrtRSI;
-    c_st.site = &cb_emlrtRSI;
-    b_r = moduleInstance->seed;
+    r = moduleInstance->seed;
     moduleInstance->state[0] = moduleInstance->seed;
-    for (r = 0; r < 623; r++) {
-      b_r = ((b_r ^ b_r >> 30U) * 1812433253U + (uint32_T)r) + 1U;
-      moduleInstance->state[r + 1] = b_r;
+    for (b_r = 0; b_r < 623; b_r++) {
+      r = ((r ^ r >> 30U) * 1812433253U + (uint32_T)b_r) + 1U;
+      moduleInstance->state[b_r + 1] = r;
     }
 
     moduleInstance->state[624] = 624U;
@@ -1622,35 +1548,37 @@ static void rng(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance, const
     }
   } else if (moduleInstance->method == 4U) {
     st.site = &v_emlrtRSI;
-    b_st.site = &db_emlrtRSI;
-    c_st.site = &eb_emlrtRSI;
-    r = (int32_T)(moduleInstance->seed >> 16U);
+    b_r = (int32_T)(moduleInstance->seed >> 16U);
     t = (int32_T)(moduleInstance->seed & 32768U);
-    moduleInstance->c_state = ((((moduleInstance->seed - ((uint32_T)r << 16U)) -
-      (uint32_T)t) << 16U) + (uint32_T)t) + (uint32_T)r;
+    moduleInstance->c_state = (uint32_T)b_r << 16U;
+    moduleInstance->c_state = moduleInstance->seed - moduleInstance->c_state;
+    moduleInstance->c_state -= (uint32_T)t;
+    moduleInstance->c_state <<= 16U;
+    moduleInstance->c_state += (uint32_T)t;
+    moduleInstance->c_state += (uint32_T)b_r;
     if (moduleInstance->c_state < 1U) {
       moduleInstance->c_state = 1144108930U;
     } else if (moduleInstance->c_state > 2147483646U) {
       moduleInstance->c_state = 2147483646U;
     }
   } else {
-    for (r = 0; r < 22; r++) {
-      u[r] = b_u[r];
+    for (b_r = 0; b_r < 22; b_r++) {
+      u[b_r] = b_u[b_r];
     }
 
     y = NULL;
     m = emlrtCreateCharArray(2, &iv[0]);
     emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 22, m, &u[0]);
     emlrtAssign(&y, m);
-    for (r = 0; r < 22; r++) {
-      u[r] = b_u[r];
+    for (b_r = 0; b_r < 22; b_r++) {
+      u[b_r] = b_u[b_r];
     }
 
     b_y = NULL;
     m = emlrtCreateCharArray(2, &iv1[0]);
     emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 22, m, &u[0]);
     emlrtAssign(&b_y, m);
-    st.site = &uc_emlrtRSI;
+    st.site = &fc_emlrtRSI;
     error(&st, y, getString(&st, b_message(&st, b_y, &j_emlrtMCI), &j_emlrtMCI),
           &j_emlrtMCI);
   }
@@ -1690,7 +1618,7 @@ static real_T now(void)
       r = (int32_T)muDoubleScalarRem((real_T)(expl_temp.tm_year + 1900), 4.0);
       if (r == 0) {
         r = 0;
-      } else if (expl_temp.tm_year + 1900 < 0) {
+      } else if (r < 0) {
         r += 4;
       }
     }
@@ -1703,7 +1631,7 @@ static real_T now(void)
         r = (int32_T)muDoubleScalarRem((real_T)(expl_temp.tm_year + 1900), 100.0);
         if (r == 0) {
           r = 0;
-        } else if (expl_temp.tm_year + 1900 < 0) {
+        } else if (r < 0) {
           r += 100;
         }
       }
@@ -1724,7 +1652,7 @@ static real_T now(void)
         r = (int32_T)muDoubleScalarRem((real_T)(expl_temp.tm_year + 1900), 400.0);
         if (r == 0) {
           r = 0;
-        } else if (expl_temp.tm_year + 1900 < 0) {
+        } else if (r < 0) {
           r += 400;
         }
       }
@@ -1751,7 +1679,7 @@ static real_T b_mod(real_T x)
     r = muDoubleScalarRem(x, 2.147483647E+9);
     if (r == 0.0) {
       r = 0.0;
-    } else if (x < 0.0) {
+    } else if (r < 0.0) {
       r += 2.147483647E+9;
     }
   }
@@ -1802,7 +1730,7 @@ static void SystemCore_checkTunablePropChange(const emlrtStack *sp,
   }
 }
 
-static void mw__internal__call__reset(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void mw__internal__call__reset(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, real_T EbNo, real_T SignalPower)
 {
   static const int32_T iv[2] = { 1, 45 };
@@ -1870,7 +1798,7 @@ static void mw__internal__call__reset(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
     AWGNChannelBase_set_SignalPower(&st, &moduleInstance->sysobj, SignalPower);
   }
 
-  st.site = &fb_emlrtRSI;
+  st.site = &bb_emlrtRSI;
   if (moduleInstance->sysobj.isInitialized == 2) {
     for (i = 0; i < 45; i++) {
       u[i] = c_u[i];
@@ -1926,9 +1854,9 @@ static void mw__internal__call__reset(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   }
 }
 
-static void mw__internal__call__step(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void mw__internal__call__step(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, real_T EbNo, real_T SignalPower,
-  creal_T b_u0[704], creal_T c_y0[704])
+  creal_T b_u0[528], creal_T c_y0[528])
 {
   static const int32_T iv[2] = { 1, 51 };
 
@@ -1936,7 +1864,7 @@ static void mw__internal__call__step(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
 
   static const int32_T iv2[2] = { 1, 5 };
 
-  static int16_T inSize[8] = { 704, 1, 1, 1, 1, 1, 1, 1 };
+  static int16_T inSize[8] = { 528, 1, 1, 1, 1, 1, 1, 1 };
 
   static char_T b_u[51] = { 'M', 'A', 'T', 'L', 'A', 'B', ':', 's', 'y', 's',
     't', 'e', 'm', ':', 'm', 'e', 't', 'h', 'o', 'd', 'C', 'a', 'l', 'l', 'e',
@@ -1996,30 +1924,30 @@ static void mw__internal__call__step(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   }
 
   if (moduleInstance->sysobj.EbNo != EbNo) {
-    st.site = &gb_emlrtRSI;
+    st.site = &cb_emlrtRSI;
     b_st.site = &e_emlrtRSI;
     flag = (moduleInstance->sysobj.isInitialized == 1);
     if (flag) {
       moduleInstance->sysobj.TunablePropsChanged = true;
     }
 
-    st.site = &gb_emlrtRSI;
+    st.site = &cb_emlrtRSI;
     AWGNChannelBase_set_EbNo(&st, &moduleInstance->sysobj, EbNo);
   }
 
   if (moduleInstance->sysobj.SignalPower != SignalPower) {
-    st.site = &hb_emlrtRSI;
+    st.site = &db_emlrtRSI;
     b_st.site = &e_emlrtRSI;
     flag = (moduleInstance->sysobj.isInitialized == 1);
     if (flag) {
       moduleInstance->sysobj.TunablePropsChanged = true;
     }
 
-    st.site = &hb_emlrtRSI;
+    st.site = &db_emlrtRSI;
     AWGNChannelBase_set_SignalPower(&st, &moduleInstance->sysobj, SignalPower);
   }
 
-  st.site = &ib_emlrtRSI;
+  st.site = &eb_emlrtRSI;
   if (moduleInstance->sysobj.isInitialized != 1) {
     b_st.site = &f_emlrtRSI;
     c_st.site = &f_emlrtRSI;
@@ -2076,13 +2004,13 @@ static void mw__internal__call__step(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   if (moduleInstance->sysobj.TunablePropsChanged) {
     moduleInstance->sysobj.TunablePropsChanged = false;
     c_st.site = &f_emlrtRSI;
-    d_st.site = &jb_emlrtRSI;
+    d_st.site = &fb_emlrtRSI;
     for (k = 0; k < 4; k++) {
       dv[k] = 1.0;
     }
 
     moduleInstance->sysobj.pNumChanFromProp = maximum(dv);
-    e_st.site = &kb_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     AWGNChannelBase_getStandardDeviation(&e_st, &moduleInstance->sysobj);
   }
 
@@ -2108,9 +2036,9 @@ static void mw__internal__call__step(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   SystemCore_checkTunablePropChange(&b_st, &moduleInstance->sysobj);
 }
 
-static void AWGNChannelBase_stepImpl(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void AWGNChannelBase_stepImpl(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, comm_internal_AWGNChannel *obj, creal_T
-  x[704], creal_T y[704])
+  x[528], creal_T y[528])
 {
   static const int32_T iv[2] = { 1, 49 };
 
@@ -2168,7 +2096,7 @@ static void AWGNChannelBase_stepImpl(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
       m = emlrtCreateCharArray(2, &iv3[0]);
       emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 53, m, &b_u[0]);
       emlrtAssign(&f_y, m);
-      st.site = &sc_emlrtRSI;
+      st.site = &dc_emlrtRSI;
       error(&st, c_y, getString(&st, b_message(&st, f_y, &k_emlrtMCI),
              &k_emlrtMCI), &k_emlrtMCI);
     }
@@ -2193,17 +2121,17 @@ static void AWGNChannelBase_stepImpl(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
     m = emlrtCreateCharArray(2, &iv2[0]);
     emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 49, m, &u[0]);
     emlrtAssign(&e_y, m);
-    st.site = &tc_emlrtRSI;
+    st.site = &ec_emlrtRSI;
     error(&st, b_y, getString(&st, b_message(&st, e_y, &l_emlrtMCI), &l_emlrtMCI),
           &l_emlrtMCI);
   }
 
   b_std = obj->pStd;
-  st.site = &lb_emlrtRSI;
-  b_st.site = &mb_emlrtRSI;
-  c_st.site = &nb_emlrtRSI;
+  st.site = &hb_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  c_st.site = &jb_emlrtRSI;
   complexLike(moduleInstance, &c_st, y);
-  for (i = 0; i < 704; i++) {
+  for (i = 0; i < 528; i++) {
     d_y = y[i];
     d_y.re = x[i].re + b_std * d_y.re;
     d_y.im = x[i].im + b_std * d_y.im;
@@ -2211,119 +2139,109 @@ static void AWGNChannelBase_stepImpl(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   }
 }
 
-static void complexLike(InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance,
-  const emlrtStack *sp, creal_T r[704])
+static void complexLike(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance,
+  const emlrtStack *sp, creal_T r[528])
 {
   emlrtStack b_st;
   emlrtStack c_st;
   emlrtStack st;
-  creal_T b_r;
+  creal_T d_r;
+  real_T b_r;
   real_T c_r;
-  real_T d_r;
-  real_T t;
+  real_T re;
   int32_T k;
   uint32_T e_state;
   uint32_T f_state;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &ob_emlrtRSI;
+  st.site = &kb_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   if (moduleInstance->b_method == 0U) {
-    b_st.site = &pb_emlrtRSI;
+    b_st.site = &lb_emlrtRSI;
     if (moduleInstance->method == 4U) {
-      c_st.site = &sb_emlrtRSI;
+      c_st.site = &mb_emlrtRSI;
       eml_rand_mcg16807_stateful(moduleInstance, r);
     } else if (moduleInstance->method == 5U) {
-      c_st.site = &tb_emlrtRSI;
+      c_st.site = &nb_emlrtRSI;
       eml_rand_shr3cong_stateful(moduleInstance, r);
     } else {
-      c_st.site = &ub_emlrtRSI;
+      c_st.site = &ob_emlrtRSI;
       eml_rand_mt19937ar_stateful(moduleInstance, &c_st, r);
     }
   } else if (moduleInstance->b_method == 4U) {
-    for (k = 0; k < 704; k++) {
+    for (k = 0; k < 528; k++) {
+      e_state = moduleInstance->d_state[0];
+      do {
+        genrandu(e_state, &f_state, &b_r);
+        genrandu(f_state, &e_state, &re);
+        b_r = 2.0 * b_r - 1.0;
+        re = 2.0 * re - 1.0;
+        re = re * re + b_r * b_r;
+      } while (!(re <= 1.0));
+
+      b_r *= muDoubleScalarSqrt(-2.0 * muDoubleScalarLog(re) / re);
+      moduleInstance->d_state[0] = e_state;
       e_state = moduleInstance->d_state[0];
       do {
         genrandu(e_state, &f_state, &c_r);
-        genrandu(f_state, &e_state, &t);
+        genrandu(f_state, &e_state, &re);
         c_r = 2.0 * c_r - 1.0;
-        t = 2.0 * t - 1.0;
-        t = t * t + c_r * c_r;
-      } while (!(t <= 1.0));
+        re = 2.0 * re - 1.0;
+        re = re * re + c_r * c_r;
+      } while (!(re <= 1.0));
 
-      c_r *= muDoubleScalarSqrt(-2.0 * muDoubleScalarLog(t) / t);
+      c_r *= muDoubleScalarSqrt(-2.0 * muDoubleScalarLog(re) / re);
       moduleInstance->d_state[0] = e_state;
-      e_state = moduleInstance->d_state[0];
-      do {
-        genrandu(e_state, &f_state, &d_r);
-        genrandu(f_state, &e_state, &t);
-        d_r = 2.0 * d_r - 1.0;
-        t = 2.0 * t - 1.0;
-        t = t * t + d_r * d_r;
-      } while (!(t <= 1.0));
-
-      d_r *= muDoubleScalarSqrt(-2.0 * muDoubleScalarLog(t) / t);
-      moduleInstance->d_state[0] = e_state;
-      r[k].re = c_r;
-      r[k].im = d_r;
+      r[k].re = b_r;
+      r[k].im = c_r;
       if (r[k].im == 0.0) {
-        c_r = r[k].re / 1.4142135623730951;
-        d_r = 0.0;
+        re = r[k].re / 1.4142135623730951;
+        b_r = 0.0;
       } else if (r[k].re == 0.0) {
-        c_r = 0.0;
-        d_r = r[k].im / 1.4142135623730951;
+        re = 0.0;
+        b_r = r[k].im / 1.4142135623730951;
       } else {
-        c_r = r[k].re / 1.4142135623730951;
-        d_r = r[k].im / 1.4142135623730951;
+        re = r[k].re / 1.4142135623730951;
+        b_r = r[k].im / 1.4142135623730951;
       }
 
-      r[k].re = c_r;
-      r[k].im = d_r;
+      r[k].re = re;
+      r[k].im = b_r;
     }
   } else {
-    for (k = 0; k < 704; k++) {
-      b_st.site = &qb_emlrtRSI;
-      c_st.site = &xb_emlrtRSI;
+    for (k = 0; k < 528; k++) {
+      b_r = genrandn(moduleInstance->d_state);
       c_r = genrandn(moduleInstance->d_state);
-      b_st.site = &rb_emlrtRSI;
-      c_st.site = &xb_emlrtRSI;
-      d_r = genrandn(moduleInstance->d_state);
-      r[k].re = c_r;
-      r[k].im = d_r;
-    }
-
-    for (k = 0; k < 704; k++) {
-      b_r = r[k];
-      if (b_r.im == 0.0) {
-        c_r = b_r.re / 1.4142135623730951;
-        d_r = 0.0;
-      } else if (b_r.re == 0.0) {
-        c_r = 0.0;
-        d_r = b_r.im / 1.4142135623730951;
+      if (c_r == 0.0) {
+        re = b_r / 1.4142135623730951;
+        b_r = 0.0;
+      } else if (b_r == 0.0) {
+        re = 0.0;
+        b_r = c_r / 1.4142135623730951;
       } else {
-        c_r = b_r.re / 1.4142135623730951;
-        d_r = b_r.im / 1.4142135623730951;
+        re = b_r / 1.4142135623730951;
+        b_r = c_r / 1.4142135623730951;
       }
 
-      b_r.re = c_r;
-      b_r.im = d_r;
-      r[k] = b_r;
+      d_r.re = re;
+      d_r.im = b_r;
+      r[k] = d_r;
     }
   }
 }
 
-static void eml_rand_mcg16807_stateful(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
-  *moduleInstance, creal_T r[704])
+static void eml_rand_mcg16807_stateful(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance, creal_T r[528])
 {
   real_T b_r;
   real_T c_r;
   real_T t;
   int32_T k;
   uint32_T e_state;
-  for (k = 0; k < 704; k++) {
+  for (k = 0; k < 528; k++) {
     do {
       genrandu(moduleInstance->c_state, &e_state, &b_r);
       genrandu(e_state, &moduleInstance->c_state, &t);
@@ -2377,47 +2295,36 @@ static void genrandu(uint32_T s, uint32_T *e_state, real_T *r)
   *r = (real_T)*e_state * 4.6566128752457969E-10;
 }
 
-static void eml_rand_shr3cong_stateful(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
-  *moduleInstance, creal_T r[704])
+static void eml_rand_shr3cong_stateful(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance, creal_T r[528])
 {
-  emlrtStack b_st;
-  emlrtStack st;
-  creal_T b_r;
+  creal_T d_r;
+  real_T b_r;
   real_T c_r;
-  real_T d_r;
+  real_T re;
   int32_T k;
-  for (k = 0; k < 704; k++) {
-    st.site = &vb_emlrtRSI;
-    b_st.site = &xb_emlrtRSI;
+  for (k = 0; k < 528; k++) {
+    b_r = genrandn(moduleInstance->b_state);
     c_r = genrandn(moduleInstance->b_state);
-    st.site = &wb_emlrtRSI;
-    b_st.site = &xb_emlrtRSI;
-    d_r = genrandn(moduleInstance->b_state);
-    r[k].re = c_r;
-    r[k].im = d_r;
-  }
-
-  for (k = 0; k < 704; k++) {
-    b_r = r[k];
-    if (b_r.im == 0.0) {
-      c_r = b_r.re / 1.4142135623730951;
-      d_r = 0.0;
-    } else if (b_r.re == 0.0) {
-      c_r = 0.0;
-      d_r = b_r.im / 1.4142135623730951;
+    if (c_r == 0.0) {
+      re = b_r / 1.4142135623730951;
+      b_r = 0.0;
+    } else if (b_r == 0.0) {
+      re = 0.0;
+      b_r = c_r / 1.4142135623730951;
     } else {
-      c_r = b_r.re / 1.4142135623730951;
-      d_r = b_r.im / 1.4142135623730951;
+      re = b_r / 1.4142135623730951;
+      b_r = c_r / 1.4142135623730951;
     }
 
-    b_r.re = c_r;
-    b_r.im = d_r;
-    r[k] = b_r;
+    d_r.re = re;
+    d_r.im = b_r;
+    r[k] = d_r;
   }
 }
 
-static void eml_rand_mt19937ar_stateful(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
-  *moduleInstance, const emlrtStack *sp, creal_T r[704])
+static void eml_rand_mt19937ar_stateful(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
+  *moduleInstance, const emlrtStack *sp, creal_T r[528])
 {
   emlrtStack st;
   creal_T b_r;
@@ -2426,16 +2333,16 @@ static void eml_rand_mt19937ar_stateful(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   int32_T k;
   st.prev = sp;
   st.tls = sp->tls;
-  for (k = 0; k < 704; k++) {
-    st.site = &dc_emlrtRSI;
+  for (k = 0; k < 528; k++) {
+    st.site = &pb_emlrtRSI;
     re = eml_rand_mt19937ar(&st, moduleInstance->state);
-    st.site = &ec_emlrtRSI;
+    st.site = &qb_emlrtRSI;
     im = eml_rand_mt19937ar(&st, moduleInstance->state);
     r[k].re = re;
     r[k].im = im;
   }
 
-  for (k = 0; k < 704; k++) {
+  for (k = 0; k < 528; k++) {
     b_r = r[k];
     if (b_r.im == 0.0) {
       re = b_r.re / 1.4142135623730951;
@@ -2454,7 +2361,7 @@ static void eml_rand_mt19937ar_stateful(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
   }
 }
 
-static const mxArray *emlrt_marshallOut(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static const mxArray *emlrt_marshallOut(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance)
 {
   static const int32_T iv2[2] = { 1, 8 };
@@ -2665,7 +2572,7 @@ static const mxArray *b_emlrt_marshallOut(const uint32_T u[2])
 }
 
 static const mxArray *cgxe_mdl_get_sim_state
-  (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance)
+  (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance)
 {
   const mxArray *st;
   st = NULL;
@@ -2673,7 +2580,7 @@ static const mxArray *cgxe_mdl_get_sim_state
   return st;
 }
 
-static void emlrt_marshallIn(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void emlrt_marshallIn(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const emlrtStack *sp, const mxArray *u)
 {
   emlrtMsgIdentifier thisId;
@@ -2910,7 +2817,7 @@ static real_T o_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   return y;
 }
 
-static void cgxe_mdl_set_sim_state(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void cgxe_mdl_set_sim_state(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance, const mxArray *st)
 {
   emlrtStack b_st = { NULL,            /* site */
@@ -3076,7 +2983,6 @@ static real_T genrandn(uint32_T e_state[2])
     2.2725186, 2.3239338, 2.3795008, 2.4402218, 2.5075117, 2.5834658, 2.6713916,
     2.7769942, 2.7769942, 2.7769942, 2.7769942 };
 
-  emlrtStack st;
   real_T s;
   real_T x;
   real_T y;
@@ -3085,7 +2991,6 @@ static real_T genrandn(uint32_T e_state[2])
   uint32_T icng;
   uint32_T jsr;
   uint32_T ui;
-  st.site = &yb_emlrtRSI;
   icng = 69069U * e_state[0] + 1234567U;
   jsr = e_state[1] ^ e_state[1] << 13;
   jsr ^= jsr >> 17;
@@ -3095,7 +3000,6 @@ static real_T genrandn(uint32_T e_state[2])
   z = (real_T)(int32_T)ui * 4.6566128730773926E-10 * dv[j];
   if (!(muDoubleScalarAbs(z) <= dv[j - 1])) {
     x = (muDoubleScalarAbs(z) - dv[j - 1]) / (dv[j] - dv[j - 1]);
-    st.site = &ac_emlrtRSI;
     icng = 69069U * icng + 1234567U;
     jsr ^= jsr << 13;
     jsr ^= jsr >> 17;
@@ -3119,14 +3023,12 @@ static real_T genrandn(uint32_T e_state[2])
       } else if (!(muDoubleScalarExp(-0.5 * dv[j] * dv[j]) + y * 0.01958303 /
                    dv[j] <= muDoubleScalarExp(-0.5 * z * z))) {
         do {
-          st.site = &bc_emlrtRSI;
           icng = 69069U * icng + 1234567U;
           jsr ^= jsr << 13;
           jsr ^= jsr >> 17;
           jsr ^= jsr << 5;
           x = muDoubleScalarLog((real_T)(int32_T)(icng + jsr) *
                                 2.328306436538696E-10 + 0.5) / 2.776994;
-          st.site = &cc_emlrtRSI;
           icng = 69069U * icng + 1234567U;
           jsr ^= jsr << 13;
           jsr ^= jsr >> 17;
@@ -3296,20 +3198,19 @@ static real_T eml_rand_mt19937ar(const emlrtStack *sp, uint32_T e_state[625])
   uint32_T u32[2];
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &fc_emlrtRSI;
+  st.site = &rb_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   do {
     exitg1 = 0;
-    b_st.site = &gc_emlrtRSI;
     genrand_uint32_vector(e_state, u32);
     i = (int32_T)((u32[1] >> 24U) + 1U);
-    r = (((real_T)(u32[0] >> 3U) * 1.6777216E+7 + (real_T)((int32_T)u32[1] &
-           16777215)) * 2.2204460492503131E-16 - 1.0) * dv[i];
+    r = (((real_T)(u32[0] >> 3U) * 1.6777216E+7 + (real_T)(u32[1] & 16777215U)) *
+         2.2204460492503131E-16 - 1.0) * dv[i];
     if (muDoubleScalarAbs(r) <= dv[i - 1]) {
       exitg1 = 1;
     } else if (i < 256) {
-      b_st.site = &hc_emlrtRSI;
+      b_st.site = &sb_emlrtRSI;
       u = b_genrandu(&b_st, e_state);
       if (dv1[i] + u * (dv1[i - 1] - dv1[i]) < muDoubleScalarExp(-0.5 * r * r))
       {
@@ -3317,10 +3218,10 @@ static real_T eml_rand_mt19937ar(const emlrtStack *sp, uint32_T e_state[625])
       }
     } else {
       do {
-        b_st.site = &ic_emlrtRSI;
+        b_st.site = &tb_emlrtRSI;
         u = b_genrandu(&b_st, e_state);
         x = muDoubleScalarLog(u) * 0.273661237329758;
-        b_st.site = &jc_emlrtRSI;
+        b_st.site = &ub_emlrtRSI;
         u = b_genrandu(&b_st, e_state);
       } while (!(-2.0 * muDoubleScalarLog(u) > x * x));
 
@@ -3403,10 +3304,11 @@ static real_T b_genrandu(const emlrtStack *sp, uint32_T mt[625])
   const mxArray *b_y;
   const mxArray *m;
   const mxArray *y;
-  real_T r;
   int32_T exitg1;
   int32_T k;
   uint32_T u[2];
+  uint32_T u_idx_0;
+  uint32_T u_idx_1;
   char_T b_u[37];
   boolean_T exitg2;
   boolean_T isvalid;
@@ -3414,50 +3316,49 @@ static real_T b_genrandu(const emlrtStack *sp, uint32_T mt[625])
   st.tls = sp->tls;
 
   /* ========================= COPYRIGHT NOTICE ============================ */
-  /*  This is a uniform (0,1) pseudorandom number generator based on:        */
-  /*                                                                         */
-  /*  A C-program for MT19937, with initialization improved 2002/1/26.       */
-  /*  Coded by Takuji Nishimura and Makoto Matsumoto.                        */
-  /*                                                                         */
-  /*  Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,      */
-  /*  All rights reserved.                                                   */
-  /*                                                                         */
-  /*  Redistribution and use in source and binary forms, with or without     */
-  /*  modification, are permitted provided that the following conditions     */
-  /*  are met:                                                               */
-  /*                                                                         */
-  /*    1. Redistributions of source code must retain the above copyright    */
-  /*       notice, this list of conditions and the following disclaimer.     */
-  /*                                                                         */
+  /*  This is a uniform (0,1) pseudorandom number generator based on: */
+  /*  */
+  /*  A C-program for MT19937, with initialization improved 2002/1/26. */
+  /*  Coded by Takuji Nishimura and Makoto Matsumoto. */
+  /*  */
+  /*  Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura, */
+  /*  All rights reserved. */
+  /*  */
+  /*  Redistribution and use in source and binary forms, with or without */
+  /*  modification, are permitted provided that the following conditions */
+  /*  are met: */
+  /*  */
+  /*    1. Redistributions of source code must retain the above copyright */
+  /*       notice, this list of conditions and the following disclaimer. */
+  /*  */
   /*    2. Redistributions in binary form must reproduce the above copyright */
-  /*       notice, this list of conditions and the following disclaimer      */
-  /*       in the documentation and/or other materials provided with the     */
-  /*       distribution.                                                     */
-  /*                                                                         */
-  /*    3. The names of its contributors may not be used to endorse or       */
-  /*       promote products derived from this software without specific      */
-  /*       prior written permission.                                         */
-  /*                                                                         */
-  /*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS    */
-  /*  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT      */
-  /*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR  */
-  /*  A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT  */
-  /*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,  */
-  /*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT       */
-  /*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,  */
-  /*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY  */
-  /*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT    */
+  /*       notice, this list of conditions and the following disclaimer */
+  /*       in the documentation and/or other materials provided with the */
+  /*       distribution. */
+  /*  */
+  /*    3. The names of its contributors may not be used to endorse or */
+  /*       promote products derived from this software without specific */
+  /*       prior written permission. */
+  /*  */
+  /*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS */
+  /*  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT */
+  /*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR */
+  /*  A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT */
+  /*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, */
+  /*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT */
+  /*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, */
+  /*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY */
+  /*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT */
   /*  (INCLUDING  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE */
-  /*  OF THIS  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  */
-  /*                                                                         */
+  /*  OF THIS  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
+  /*  */
   /* =============================   END   ================================= */
   do {
     exitg1 = 0;
-    st.site = &kc_emlrtRSI;
     genrand_uint32_vector(mt, u);
-    r = 1.1102230246251565E-16 * ((real_T)(u[0] >> 5U) * 6.7108864E+7 + (real_T)
-      (u[1] >> 6U));
-    if (r == 0.0) {
+    u_idx_0 = u[0] >> 5U;
+    u_idx_1 = u[1] >> 6U;
+    if ((u_idx_0 == 0U) && (u_idx_1 == 0U)) {
       if ((mt[624] >= 1U) && (mt[624] < 625U)) {
         isvalid = true;
       } else {
@@ -3495,7 +3396,7 @@ static real_T b_genrandu(const emlrtStack *sp, uint32_T mt[625])
         m = emlrtCreateCharArray(2, &iv1[0]);
         emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 37, m, &b_u[0]);
         emlrtAssign(&b_y, m);
-        st.site = &rc_emlrtRSI;
+        st.site = &cc_emlrtRSI;
         error(&st, y, getString(&st, b_message(&st, b_y, &m_emlrtMCI),
                &m_emlrtMCI), &m_emlrtMCI);
       }
@@ -3504,101 +3405,102 @@ static real_T b_genrandu(const emlrtStack *sp, uint32_T mt[625])
     }
   } while (exitg1 == 0);
 
-  return r;
+  return 1.1102230246251565E-16 * ((real_T)u_idx_0 * 6.7108864E+7 + (real_T)
+    u_idx_1);
 }
 
-static void init_simulink_io_address(InstanceStruct_vyk94dRgB2zcdSb8CoDOo
+static void init_simulink_io_address(InstanceStruct_L4FxDF8PMmLMazYl7DbTvE
   *moduleInstance)
 {
   moduleInstance->emlrtRootTLSGlobal = (void *)cgxertGetEMLRTCtx
     (moduleInstance->S);
-  moduleInstance->u0 = (creal_T (*)[704])cgxertGetInputPortSignal
+  moduleInstance->u0 = (creal_T (*)[528])cgxertGetInputPortSignal
     (moduleInstance->S, 0);
-  moduleInstance->b_y0 = (creal_T (*)[704])cgxertGetOutputPortSignal
+  moduleInstance->b_y0 = (creal_T (*)[528])cgxertGetOutputPortSignal
     (moduleInstance->S, 0);
 }
 
 /* CGXE Glue Code */
-static void mdlOutputs_vyk94dRgB2zcdSb8CoDOo(SimStruct *S, int_T tid)
+static void mdlOutputs_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S, int_T tid)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_outputs(moduleInstance);
 }
 
-static void mdlInitialize_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
+static void mdlInitialize_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_initialize(moduleInstance);
 }
 
-static void mdlUpdate_vyk94dRgB2zcdSb8CoDOo(SimStruct *S, int_T tid)
+static void mdlUpdate_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S, int_T tid)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_update(moduleInstance);
 }
 
-static void mdlDerivatives_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
+static void mdlDerivatives_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_derivative(moduleInstance);
 }
 
-static mxArray* getSimState_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
+static mxArray* getSimState_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S)
 {
   mxArray* mxSS;
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   mxSS = (mxArray *) cgxe_mdl_get_sim_state(moduleInstance);
   return mxSS;
 }
 
-static void setSimState_vyk94dRgB2zcdSb8CoDOo(SimStruct *S, const mxArray *ss)
+static void setSimState_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S, const mxArray *ss)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_set_sim_state(moduleInstance, emlrtAlias(ss));
 }
 
-static void mdlTerminate_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
+static void mdlTerminate_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_terminate(moduleInstance);
   free((void *)moduleInstance);
 }
 
-static void mdlEnable_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
+static void mdlEnable_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_enable(moduleInstance);
 }
 
-static void mdlDisable_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
+static void mdlDisable_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_disable(moduleInstance);
 }
 
-static void mdlStart_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
+static void mdlStart_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S)
 {
-  InstanceStruct_vyk94dRgB2zcdSb8CoDOo *moduleInstance =
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo *)calloc(1, sizeof
-    (InstanceStruct_vyk94dRgB2zcdSb8CoDOo));
+  InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *moduleInstance =
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE *)calloc(1, sizeof
+    (InstanceStruct_L4FxDF8PMmLMazYl7DbTvE));
   moduleInstance->S = S;
   cgxertSetRuntimeInstance(S, (void *)moduleInstance);
-  ssSetmdlOutputs(S, mdlOutputs_vyk94dRgB2zcdSb8CoDOo);
-  ssSetmdlInitializeConditions(S, mdlInitialize_vyk94dRgB2zcdSb8CoDOo);
-  ssSetmdlUpdate(S, mdlUpdate_vyk94dRgB2zcdSb8CoDOo);
-  ssSetmdlDerivatives(S, mdlDerivatives_vyk94dRgB2zcdSb8CoDOo);
-  ssSetmdlTerminate(S, mdlTerminate_vyk94dRgB2zcdSb8CoDOo);
-  ssSetmdlEnable(S, mdlEnable_vyk94dRgB2zcdSb8CoDOo);
-  ssSetmdlDisable(S, mdlDisable_vyk94dRgB2zcdSb8CoDOo);
+  ssSetmdlOutputs(S, mdlOutputs_L4FxDF8PMmLMazYl7DbTvE);
+  ssSetmdlInitializeConditions(S, mdlInitialize_L4FxDF8PMmLMazYl7DbTvE);
+  ssSetmdlUpdate(S, mdlUpdate_L4FxDF8PMmLMazYl7DbTvE);
+  ssSetmdlDerivatives(S, mdlDerivatives_L4FxDF8PMmLMazYl7DbTvE);
+  ssSetmdlTerminate(S, mdlTerminate_L4FxDF8PMmLMazYl7DbTvE);
+  ssSetmdlEnable(S, mdlEnable_L4FxDF8PMmLMazYl7DbTvE);
+  ssSetmdlDisable(S, mdlDisable_L4FxDF8PMmLMazYl7DbTvE);
   cgxe_mdl_start(moduleInstance);
 
   {
@@ -3608,42 +3510,42 @@ static void mdlStart_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
   }
 }
 
-static void mdlProcessParameters_vyk94dRgB2zcdSb8CoDOo(SimStruct *S)
+static void mdlProcessParameters_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S)
 {
 }
 
-void method_dispatcher_vyk94dRgB2zcdSb8CoDOo(SimStruct *S, int_T method, void
+void method_dispatcher_L4FxDF8PMmLMazYl7DbTvE(SimStruct *S, int_T method, void
   *data)
 {
   switch (method) {
    case SS_CALL_MDL_START:
-    mdlStart_vyk94dRgB2zcdSb8CoDOo(S);
+    mdlStart_L4FxDF8PMmLMazYl7DbTvE(S);
     break;
 
    case SS_CALL_MDL_PROCESS_PARAMETERS:
-    mdlProcessParameters_vyk94dRgB2zcdSb8CoDOo(S);
+    mdlProcessParameters_L4FxDF8PMmLMazYl7DbTvE(S);
     break;
 
    case SS_CALL_MDL_GET_SIM_STATE:
-    *((mxArray**) data) = getSimState_vyk94dRgB2zcdSb8CoDOo(S);
+    *((mxArray**) data) = getSimState_L4FxDF8PMmLMazYl7DbTvE(S);
     break;
 
    case SS_CALL_MDL_SET_SIM_STATE:
-    setSimState_vyk94dRgB2zcdSb8CoDOo(S, (const mxArray *) data);
+    setSimState_L4FxDF8PMmLMazYl7DbTvE(S, (const mxArray *) data);
     break;
 
    default:
     /* Unhandled method */
     /*
        sf_mex_error_message("Stateflow Internal Error:\n"
-       "Error calling method dispatcher for module: vyk94dRgB2zcdSb8CoDOo.\n"
+       "Error calling method dispatcher for module: L4FxDF8PMmLMazYl7DbTvE.\n"
        "Can't handle method %d.\n", method);
      */
     break;
   }
 }
 
-mxArray *cgxe_vyk94dRgB2zcdSb8CoDOo_BuildInfoUpdate(void)
+mxArray *cgxe_L4FxDF8PMmLMazYl7DbTvE_BuildInfoUpdate(void)
 {
   mxArray * mxBIArgs;
   mxArray * elem_1;
@@ -3700,7 +3602,7 @@ mxArray *cgxe_vyk94dRgB2zcdSb8CoDOo_BuildInfoUpdate(void)
   return mxBIArgs;
 }
 
-mxArray *cgxe_vyk94dRgB2zcdSb8CoDOo_fallback_info(void)
+mxArray *cgxe_L4FxDF8PMmLMazYl7DbTvE_fallback_info(void)
 {
   const char* fallbackInfoFields[] = { "fallbackType", "incompatiableSymbol" };
 

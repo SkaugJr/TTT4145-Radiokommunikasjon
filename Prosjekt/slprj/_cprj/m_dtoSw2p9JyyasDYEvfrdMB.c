@@ -1,7 +1,7 @@
 /* Include files */
 
 #include "modelInterface.h"
-#include "m_zrIE4lRjxJ68ofdsvR86sF.h"
+#include "m_dtoSw2p9JyyasDYEvfrdMB.h"
 #include <string.h>
 #include "mwmathutil.h"
 
@@ -14,27 +14,27 @@
 /* Variable Definitions */
 static emlrtRSInfo emlrtRSI = { 208,   /* lineNo */
   "CarrierSynchronizer",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
 };
 
 static emlrtRSInfo b_emlrtRSI = { 1,   /* lineNo */
   "Helper",                            /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\compiled\\+comm\\+internal\\Helper.p"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\compiled\\+comm\\+internal\\Helper.p"/* pathName */
 };
 
 static emlrtRSInfo c_emlrtRSI = { 1,   /* lineNo */
   "System",                            /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\System.p"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\System.p"/* pathName */
 };
 
 static emlrtRSInfo d_emlrtRSI = { 1,   /* lineNo */
   "SystemProp",                        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemProp.p"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemProp.p"/* pathName */
 };
 
 static emlrtRSInfo e_emlrtRSI = { 1,   /* lineNo */
   "SystemCore",                        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pathName */
 };
 
 static emlrtRSInfo f_emlrtRSI = { 12,  /* lineNo */
@@ -69,32 +69,32 @@ static emlrtRSInfo k_emlrtRSI = { 31,  /* lineNo */
 
 static emlrtRSInfo l_emlrtRSI = { 236, /* lineNo */
   "CarrierSynchronizer",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
 };
 
 static emlrtRSInfo m_emlrtRSI = { 93,  /* lineNo */
   "validateattributes",                /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\lib\\matlab\\lang\\validateattributes.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\lib\\matlab\\lang\\validateattributes.m"/* pathName */
 };
 
 static emlrtRSInfo n_emlrtRSI = { 215, /* lineNo */
   "CarrierSynchronizer",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
 };
 
 static emlrtRSInfo o_emlrtRSI = { 222, /* lineNo */
   "CarrierSynchronizer",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
 };
 
 static emlrtRSInfo p_emlrtRSI = { 259, /* lineNo */
   "CarrierSynchronizer",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
 };
 
 static emlrtRSInfo q_emlrtRSI = { 302, /* lineNo */
   "CarrierSynchronizer",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
 };
 
 static emlrtRSInfo r_emlrtRSI = { 33,  /* lineNo */
@@ -124,104 +124,104 @@ static emlrtRSInfo v_emlrtRSI = { 65,  /* lineNo */
 
 static emlrtRSInfo w_emlrtRSI = { 412, /* lineNo */
   "CarrierSynchronizer",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
 };
 
 static emlrtRSInfo x_emlrtRSI = { 334, /* lineNo */
   "CarrierSynchronizer",               /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pathName */
 };
 
 static emlrtRSInfo y_emlrtRSI = { 167, /* lineNo */
   "carrierSyncCore",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
 };
 
 static emlrtRSInfo ab_emlrtRSI = { 113,/* lineNo */
   "carrierSyncCore",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
 };
 
 static emlrtRSInfo bb_emlrtRSI = { 118,/* lineNo */
   "carrierSyncCore",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
 };
 
 static emlrtRSInfo cb_emlrtRSI = { 119,/* lineNo */
   "carrierSyncCore",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
 };
 
 static emlrtRSInfo db_emlrtRSI = { 138,/* lineNo */
   "carrierSyncCore",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m"/* pathName */
 };
 
 static emlrtMCInfo emlrtMCI = { 14,    /* lineNo */
   37,                                  /* colNo */
   "validatepositive",                  /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatepositive.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatepositive.m"/* pName */
 };
 
 static emlrtMCInfo b_emlrtMCI = { 14,  /* lineNo */
   37,                                  /* colNo */
   "validatefinite",                    /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatefinite.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatefinite.m"/* pName */
 };
 
 static emlrtMCInfo c_emlrtMCI = { 14,  /* lineNo */
   37,                                  /* colNo */
   "validatenonnan",                    /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnan.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnan.m"/* pName */
 };
 
 static emlrtMCInfo d_emlrtMCI = { 13,  /* lineNo */
   37,                                  /* colNo */
   "validateinteger",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validateinteger.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validateinteger.m"/* pName */
 };
 
 static emlrtMCInfo e_emlrtMCI = { 22,  /* lineNo */
   27,                                  /* colNo */
   "validategt",                        /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validategt.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validategt.m"/* pName */
 };
 
 static emlrtMCInfo f_emlrtMCI = { 22,  /* lineNo */
   27,                                  /* colNo */
   "validatele",                        /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatele.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatele.m"/* pName */
 };
 
 static emlrtMCInfo g_emlrtMCI = { 1,   /* lineNo */
   1,                                   /* colNo */
   "SystemCore",                        /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pName */
 };
 
 static emlrtMCInfo h_emlrtMCI = { 259, /* lineNo */
   7,                                   /* colNo */
   "CarrierSynchronizer",               /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m"/* pName */
 };
 
 static emlrtMCInfo i_emlrtMCI = { 13,  /* lineNo */
   13,                                  /* colNo */
   "toLogicalCheck",                    /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\toLogicalCheck.m"/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\toLogicalCheck.m"/* pName */
 };
 
 static emlrtDCInfo emlrtDCI = { 273,   /* lineNo */
   54,                                  /* colNo */
   "CarrierSynchronizer",               /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m",/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m",/* pName */
   1                                    /* checkKind */
 };
 
 static emlrtDCInfo b_emlrtDCI = { 273, /* lineNo */
   54,                                  /* colNo */
   "CarrierSynchronizer",               /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m",/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\CarrierSynchronizer.m",/* pName */
   4                                    /* checkKind */
 };
 
@@ -231,7 +231,7 @@ static emlrtBCInfo emlrtBCI = { -1,    /* iFirst */
   50,                                  /* colNo */
   "",                                  /* aName */
   "carrierSyncCore",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m",/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m",/* pName */
   0                                    /* checkKind */
 };
 
@@ -241,7 +241,7 @@ static emlrtBCInfo b_emlrtBCI = { -1,  /* iFirst */
   51,                                  /* colNo */
   "",                                  /* aName */
   "carrierSyncCore",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m",/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m",/* pName */
   0                                    /* checkKind */
 };
 
@@ -251,7 +251,7 @@ static emlrtBCInfo c_emlrtBCI = { -1,  /* iFirst */
   43,                                  /* colNo */
   "",                                  /* aName */
   "carrierSyncCore",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m",/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m",/* pName */
   0                                    /* checkKind */
 };
 
@@ -261,62 +261,62 @@ static emlrtBCInfo d_emlrtBCI = { -1,  /* iFirst */
   92,                                  /* colNo */
   "",                                  /* aName */
   "carrierSyncCore",                   /* fName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m",/* pName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\comm\\comm\\+comm\\+internal\\+carrierSync\\carrierSyncCore.m",/* pName */
   0                                    /* checkKind */
 };
 
 static emlrtRSInfo eb_emlrtRSI = { 14, /* lineNo */
   "validatenonnan",                    /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnan.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatenonnan.m"/* pathName */
 };
 
 static emlrtRSInfo fb_emlrtRSI = { 14, /* lineNo */
   "validatefinite",                    /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatefinite.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatefinite.m"/* pathName */
 };
 
 static emlrtRSInfo gb_emlrtRSI = { 14, /* lineNo */
   "validatepositive",                  /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatepositive.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatepositive.m"/* pathName */
 };
 
 static emlrtRSInfo hb_emlrtRSI = { 13, /* lineNo */
   "validateinteger",                   /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validateinteger.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validateinteger.m"/* pathName */
 };
 
 static emlrtRSInfo ib_emlrtRSI = { 13, /* lineNo */
   "toLogicalCheck",                    /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\toLogicalCheck.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\toLogicalCheck.m"/* pathName */
 };
 
 static emlrtRSInfo jb_emlrtRSI = { 22, /* lineNo */
   "validatele",                        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatele.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validatele.m"/* pathName */
 };
 
 static emlrtRSInfo kb_emlrtRSI = { 22, /* lineNo */
   "validategt",                        /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2024a\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validategt.m"/* pathName */
+  "C:\\Program Files\\MATLAB\\R2024b\\toolbox\\eml\\eml\\+coder\\+internal\\+valattr\\validategt.m"/* pathName */
 };
 
 /* Function Declarations */
-static void cgxe_mdl_start(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance);
-static void cgxe_mdl_initialize(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_start(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance);
+static void cgxe_mdl_initialize(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance);
-static void cgxe_mdl_outputs(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_outputs(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance);
-static void cgxe_mdl_update(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_update(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance);
-static void cgxe_mdl_derivative(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_derivative(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance);
-static void cgxe_mdl_enable(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_enable(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance);
-static void cgxe_mdl_disable(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_disable(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance);
-static void cgxe_mdl_terminate(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_terminate(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance);
-static void mw__internal__call__setup(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void mw__internal__call__setup(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp, real_T SamplesPerSymbol, real_T
   DampingFactor, real_T NormalizedLoopBandwidth);
 static void CarrierSynchronizer_set_SamplesPerSymbol(const emlrtStack *sp,
@@ -331,21 +331,21 @@ static void CarrierSynchronizer_setupImpl(const emlrtStack *sp,
   comm_CarrierSynchronizer *obj);
 static void SystemCore_checkTunablePropChange(const emlrtStack *sp,
   comm_CarrierSynchronizer *obj);
-static void mw__internal__call__reset(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void mw__internal__call__reset(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp, real_T SamplesPerSymbol, real_T
   DampingFactor, real_T NormalizedLoopBandwidth);
-static void mw__internal__call__step(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void mw__internal__call__step(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp, real_T SamplesPerSymbol, real_T
   DampingFactor, real_T NormalizedLoopBandwidth, creal_T b_u0[704], creal_T
   c_y0[704]);
 static void CarrierSynchronizer_stepImpl(const emlrtStack *sp,
   comm_CarrierSynchronizer *obj, creal_T input[704], creal_T output[704]);
 static creal_T expFunc(real_T in);
-static const mxArray *emlrt_marshallOut(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static const mxArray *emlrt_marshallOut(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp);
 static const mxArray *cgxe_mdl_get_sim_state
-  (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance);
-static void emlrt_marshallIn(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+  (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance);
+static void emlrt_marshallIn(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp, const mxArray *u);
 static void b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
   const char_T *identifier, comm_CarrierSynchronizer *y);
@@ -369,7 +369,7 @@ static void k_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
   emlrtMsgIdentifier *parentId, coder_array_creal_T_2D *y);
 static boolean_T l_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
   const char_T *identifier);
-static void cgxe_mdl_set_sim_state(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_set_sim_state(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const mxArray *st);
 static const mxArray *message(const emlrtStack *sp, const mxArray *m1, const
   mxArray *m2, emlrtMCInfo *location);
@@ -405,11 +405,11 @@ static void array_creal_T_2D_SetSize(coder_array_creal_T_2D *coderArray, int32_T
   size0, int32_T size1);
 static void array_creal_T_2D_Constructor(coder_array_creal_T_2D *coderArray);
 static void array_creal_T_2D_Destructor(coder_array_creal_T_2D *coderArray);
-static void init_simulink_io_address(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void init_simulink_io_address(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance);
 
 /* Function Definitions */
-static void cgxe_mdl_start(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance)
+static void cgxe_mdl_start(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
     NULL,                              /* tls */
@@ -432,7 +432,7 @@ static void cgxe_mdl_start(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_initialize(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_initialize(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
@@ -457,7 +457,7 @@ static void cgxe_mdl_initialize(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_outputs(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_outputs(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
@@ -481,38 +481,38 @@ static void cgxe_mdl_outputs(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_update(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_update(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance)
 {
   (void)moduleInstance;
 }
 
-static void cgxe_mdl_derivative(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_derivative(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance)
 {
   (void)moduleInstance;
 }
 
-static void cgxe_mdl_enable(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_enable(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance)
 {
   (void)moduleInstance;
 }
 
-static void cgxe_mdl_disable(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_disable(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance)
 {
   (void)moduleInstance;
 }
 
-static void cgxe_mdl_terminate(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_terminate(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance)
 {
   cgxertSetGcb(moduleInstance->S, -1, -1);
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void mw__internal__call__setup(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void mw__internal__call__setup(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp, real_T SamplesPerSymbol, real_T
   DampingFactor, real_T NormalizedLoopBandwidth)
 {
@@ -1420,7 +1420,6 @@ static void CarrierSynchronizer_validatePropertiesImpl(const emlrtStack *sp,
   const mxArray *d_y;
   const mxArray *m;
   const mxArray *y;
-  real_T b_x;
   real_T x;
   int32_T i;
   char_T b_u[35];
@@ -1431,20 +1430,20 @@ static void CarrierSynchronizer_validatePropertiesImpl(const emlrtStack *sp,
   b_st.tls = st.tls;
   x = obj->SamplesPerSymbol;
   if (muDoubleScalarIsNaN(x) || muDoubleScalarIsInf(x)) {
-    b_x = rtNaN;
+    x = rtNaN;
   } else if (x == 0.0) {
-    b_x = 0.0;
+    x = 0.0;
   } else {
-    b_x = muDoubleScalarRem(x, 2.0);
-    if (b_x == 0.0) {
-      b_x = 0.0;
+    x = muDoubleScalarRem(x, 2.0);
+    if (x == 0.0) {
+      x = 0.0;
     } else if (x < 0.0) {
-      b_x += 2.0;
+      x += 2.0;
     }
   }
 
   st.site = &p_emlrtRSI;
-  if (muDoubleScalarIsNaN(b_x)) {
+  if (muDoubleScalarIsNaN(x)) {
     for (i = 0; i < 19; i++) {
       u[i] = c_u[i];
     }
@@ -1466,7 +1465,7 @@ static void CarrierSynchronizer_validatePropertiesImpl(const emlrtStack *sp,
            &i_emlrtMCI), &i_emlrtMCI);
   }
 
-  if (b_x != 0.0) {
+  if (x != 0.0) {
     for (i = 0; i < 35; i++) {
       b_u[i] = d_u[i];
     }
@@ -1589,7 +1588,7 @@ static void SystemCore_checkTunablePropChange(const emlrtStack *sp,
   }
 }
 
-static void mw__internal__call__reset(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void mw__internal__call__reset(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp, real_T SamplesPerSymbol, real_T
   DampingFactor, real_T NormalizedLoopBandwidth)
 {
@@ -1718,7 +1717,7 @@ static void mw__internal__call__reset(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
   }
 }
 
-static void mw__internal__call__step(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void mw__internal__call__step(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp, real_T SamplesPerSymbol, real_T
   DampingFactor, real_T NormalizedLoopBandwidth, creal_T b_u0[704], creal_T
   c_y0[704])
@@ -2051,7 +2050,7 @@ static creal_T expFunc(real_T in)
   return val;
 }
 
-static const mxArray *emlrt_marshallOut(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static const mxArray *emlrt_marshallOut(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp)
 {
   static const int32_T iv1[2] = { 1, 8 };
@@ -2228,7 +2227,7 @@ static const mxArray *emlrt_marshallOut(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
 }
 
 static const mxArray *cgxe_mdl_get_sim_state
-  (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance)
+  (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance)
 {
   emlrtStack b_st = { NULL,            /* site */
     NULL,                              /* tls */
@@ -2242,7 +2241,7 @@ static const mxArray *cgxe_mdl_get_sim_state
   return st;
 }
 
-static void emlrt_marshallIn(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void emlrt_marshallIn(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const emlrtStack *sp, const mxArray *u)
 {
   emlrtMsgIdentifier thisId;
@@ -2432,7 +2431,7 @@ static boolean_T l_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr
   return y;
 }
 
-static void cgxe_mdl_set_sim_state(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void cgxe_mdl_set_sim_state(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance, const mxArray *st)
 {
   emlrtStack b_st = { NULL,            /* site */
@@ -2768,7 +2767,7 @@ static void array_creal_T_2D_Destructor(coder_array_creal_T_2D *coderArray)
   }
 }
 
-static void init_simulink_io_address(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
+static void init_simulink_io_address(InstanceStruct_dtoSw2p9JyyasDYEvfrdMB
   *moduleInstance)
 {
   moduleInstance->emlrtRootTLSGlobal = (void *)cgxertGetEMLRTCtx
@@ -2780,86 +2779,86 @@ static void init_simulink_io_address(InstanceStruct_zrIE4lRjxJ68ofdsvR86sF
 }
 
 /* CGXE Glue Code */
-static void mdlOutputs_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S, int_T tid)
+static void mdlOutputs_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S, int_T tid)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_outputs(moduleInstance);
 }
 
-static void mdlInitialize_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
+static void mdlInitialize_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_initialize(moduleInstance);
 }
 
-static void mdlUpdate_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S, int_T tid)
+static void mdlUpdate_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S, int_T tid)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_update(moduleInstance);
 }
 
-static void mdlDerivatives_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
+static void mdlDerivatives_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_derivative(moduleInstance);
 }
 
-static mxArray* getSimState_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
+static mxArray* getSimState_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S)
 {
   mxArray* mxSS;
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   mxSS = (mxArray *) cgxe_mdl_get_sim_state(moduleInstance);
   return mxSS;
 }
 
-static void setSimState_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S, const mxArray *ss)
+static void setSimState_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S, const mxArray *ss)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_set_sim_state(moduleInstance, emlrtAlias(ss));
 }
 
-static void mdlTerminate_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
+static void mdlTerminate_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_terminate(moduleInstance);
   free((void *)moduleInstance);
 }
 
-static void mdlEnable_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
+static void mdlEnable_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_enable(moduleInstance);
 }
 
-static void mdlDisable_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
+static void mdlDisable_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_disable(moduleInstance);
 }
 
-static void mdlStart_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
+static void mdlStart_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S)
 {
-  InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *moduleInstance =
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF *)calloc(1, sizeof
-    (InstanceStruct_zrIE4lRjxJ68ofdsvR86sF));
+  InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *moduleInstance =
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB *)calloc(1, sizeof
+    (InstanceStruct_dtoSw2p9JyyasDYEvfrdMB));
   moduleInstance->S = S;
   cgxertSetRuntimeInstance(S, (void *)moduleInstance);
-  ssSetmdlOutputs(S, mdlOutputs_zrIE4lRjxJ68ofdsvR86sF);
-  ssSetmdlInitializeConditions(S, mdlInitialize_zrIE4lRjxJ68ofdsvR86sF);
-  ssSetmdlUpdate(S, mdlUpdate_zrIE4lRjxJ68ofdsvR86sF);
-  ssSetmdlDerivatives(S, mdlDerivatives_zrIE4lRjxJ68ofdsvR86sF);
-  ssSetmdlTerminate(S, mdlTerminate_zrIE4lRjxJ68ofdsvR86sF);
-  ssSetmdlEnable(S, mdlEnable_zrIE4lRjxJ68ofdsvR86sF);
-  ssSetmdlDisable(S, mdlDisable_zrIE4lRjxJ68ofdsvR86sF);
+  ssSetmdlOutputs(S, mdlOutputs_dtoSw2p9JyyasDYEvfrdMB);
+  ssSetmdlInitializeConditions(S, mdlInitialize_dtoSw2p9JyyasDYEvfrdMB);
+  ssSetmdlUpdate(S, mdlUpdate_dtoSw2p9JyyasDYEvfrdMB);
+  ssSetmdlDerivatives(S, mdlDerivatives_dtoSw2p9JyyasDYEvfrdMB);
+  ssSetmdlTerminate(S, mdlTerminate_dtoSw2p9JyyasDYEvfrdMB);
+  ssSetmdlEnable(S, mdlEnable_dtoSw2p9JyyasDYEvfrdMB);
+  ssSetmdlDisable(S, mdlDisable_dtoSw2p9JyyasDYEvfrdMB);
   cgxe_mdl_start(moduleInstance);
 
   {
@@ -2869,42 +2868,42 @@ static void mdlStart_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
   }
 }
 
-static void mdlProcessParameters_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S)
+static void mdlProcessParameters_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S)
 {
 }
 
-void method_dispatcher_zrIE4lRjxJ68ofdsvR86sF(SimStruct *S, int_T method, void
+void method_dispatcher_dtoSw2p9JyyasDYEvfrdMB(SimStruct *S, int_T method, void
   *data)
 {
   switch (method) {
    case SS_CALL_MDL_START:
-    mdlStart_zrIE4lRjxJ68ofdsvR86sF(S);
+    mdlStart_dtoSw2p9JyyasDYEvfrdMB(S);
     break;
 
    case SS_CALL_MDL_PROCESS_PARAMETERS:
-    mdlProcessParameters_zrIE4lRjxJ68ofdsvR86sF(S);
+    mdlProcessParameters_dtoSw2p9JyyasDYEvfrdMB(S);
     break;
 
    case SS_CALL_MDL_GET_SIM_STATE:
-    *((mxArray**) data) = getSimState_zrIE4lRjxJ68ofdsvR86sF(S);
+    *((mxArray**) data) = getSimState_dtoSw2p9JyyasDYEvfrdMB(S);
     break;
 
    case SS_CALL_MDL_SET_SIM_STATE:
-    setSimState_zrIE4lRjxJ68ofdsvR86sF(S, (const mxArray *) data);
+    setSimState_dtoSw2p9JyyasDYEvfrdMB(S, (const mxArray *) data);
     break;
 
    default:
     /* Unhandled method */
     /*
        sf_mex_error_message("Stateflow Internal Error:\n"
-       "Error calling method dispatcher for module: zrIE4lRjxJ68ofdsvR86sF.\n"
+       "Error calling method dispatcher for module: dtoSw2p9JyyasDYEvfrdMB.\n"
        "Can't handle method %d.\n", method);
      */
     break;
   }
 }
 
-mxArray *cgxe_zrIE4lRjxJ68ofdsvR86sF_BuildInfoUpdate(void)
+mxArray *cgxe_dtoSw2p9JyyasDYEvfrdMB_BuildInfoUpdate(void)
 {
   mxArray * mxBIArgs;
   mxArray * elem_1;
@@ -2980,7 +2979,7 @@ mxArray *cgxe_zrIE4lRjxJ68ofdsvR86sF_BuildInfoUpdate(void)
   return mxBIArgs;
 }
 
-mxArray *cgxe_zrIE4lRjxJ68ofdsvR86sF_fallback_info(void)
+mxArray *cgxe_dtoSw2p9JyyasDYEvfrdMB_fallback_info(void)
 {
   const char* fallbackInfoFields[] = { "fallbackType", "incompatiableSymbol" };
 

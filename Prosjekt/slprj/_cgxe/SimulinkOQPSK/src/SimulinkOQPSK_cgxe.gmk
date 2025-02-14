@@ -3,27 +3,27 @@
 # Modify the following macros to reflect the tools you wish to use for
 # compiling and linking your code.
 #
-CC = "C:\Program Files\MATLAB\R2024a\bin\win64\mex.exe" -R2018a
+CC = "C:\Program Files\MATLAB\R2024b\bin\win64\mex.exe" -R2018a
 LD = $(CC)
  
 MODEL     = SimulinkOQPSK
 TARGET      = cgxe
-MODULE_SRCS   = m_vyk94dRgB2zcdSb8CoDOo.c m_zrIE4lRjxJ68ofdsvR86sF.c m_IsGNysfWLj549u5AgrrhmC.c
+MODULE_SRCS   = m_hdVr3Ti4tWZVZUU2cDk3EB.c m_L4FxDF8PMmLMazYl7DbTvE.c m_CS6TL6Ke4rnG7CriLonEOH.c
 MODEL_SRC  = SimulinkOQPSK_cgxe.c
 MODEL_REG = SimulinkOQPSK_cgxe_registry.c
 MAKEFILE    = SimulinkOQPSK_cgxe.gmk
-MATLAB_ROOT  = c:\program files\matlab\r2024a\toolbox\stateflow\stateflow\..\..\..
+MATLAB_ROOT  = c:\program files\matlab\r2024b\toolbox\stateflow\stateflow\..\..\..
 BUILDARGS   = 
 #------------------------------ Include/Lib Path ------------------------------
  
-USER_INCLUDES = -I"C:\GitHub\ttt4145-radiokommunikasjon\Prosjekt\slprj\_cgxe\simulinkoqpsk\src" -I"C:\GitHub\ttt4145-radiokommunikasjon\Prosjekt" -I"C:\GitHub\TTT4145-Radiokommunikasjon\Prosjekt\slprj\_cprj" 
+USER_INCLUDES = -I"C:\Github\TTT4145-Radiokommunikasjon\Prosjekt" -I"C:\Github\TTT4145-Radiokommunikasjon\Prosjekt\slprj\_cprj" 
 AUX_INCLUDES = 
 MLSLSF_INCLUDES  = \
-    -I"C:\Program Files\MATLAB\R2024a\extern\include" \
-    -I"C:\Program Files\MATLAB\R2024a\simulink\include" \
-    -I"C:\Program Files\MATLAB\R2024a\rtw\c\src" 
+    -I"C:\Program Files\MATLAB\R2024b\extern\include" \
+    -I"C:\Program Files\MATLAB\R2024b\simulink\include" \
+    -I"C:\Program Files\MATLAB\R2024b\rtw\c\src" 
 
-THIRD_PARTY_INCLUDES = -I"C:\GitHub\TTT4145-Radiokommunikasjon\Prosjekt\slprj\_cgxe\SimulinkOQPSK\src" -I"C:\GitHub\TTT4145-Radiokommunikasjon\Prosjekt" 
+THIRD_PARTY_INCLUDES = -I"C:\Github\TTT4145-Radiokommunikasjon\Prosjekt\slprj\_cgxe\SimulinkOQPSK\src" 
 
 INCLUDE_PATH = $(USER_INCLUDES) $(AUX_INCLUDES) $(MLSLSF_INCLUDES) $(COMPILER_INCLUDES) $(THIRD_PARTY_INCLUDES)
  
@@ -43,7 +43,7 @@ LDFLAGS =
 AUXLDFLAGS = 
 #----------------------------- Source Files -----------------------------------
  
-THIRD_PARTY_SRCS = C:/GitHub/TTT414~1/Prosjekt/slprj/_cgxe/SIMULI~1/src/signLib.c  
+THIRD_PARTY_SRCS = C:/Github/TTT414~1/Prosjekt/slprj/_cgxe/SIMULI~1/src/signLib.c  
 REQ_SRCS  = $(MODEL_SRC) $(MODEL_REG) $(MODULE_SRCS) $(THIRD_PARTY_SRCS) 
 
 USER_OBJS =
