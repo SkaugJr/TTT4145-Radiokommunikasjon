@@ -8,7 +8,7 @@ LD = $(CC)
  
 MODEL     = SimulinkOQPSK
 TARGET      = cgxe
-MODULE_SRCS   = m_hdVr3Ti4tWZVZUU2cDk3EB.c m_L4FxDF8PMmLMazYl7DbTvE.c m_CS6TL6Ke4rnG7CriLonEOH.c
+MODULE_SRCS   = m_hGzJoyBXd4womJwUu82PQG.c m_zTViAQ1klSrWSv6K0WhyYG.c m_GAdgY9KUhCyNS3WcZY0JdF.c
 MODEL_SRC  = SimulinkOQPSK_cgxe.c
 MODEL_REG = SimulinkOQPSK_cgxe_registry.c
 MAKEFILE    = SimulinkOQPSK_cgxe.gmk
@@ -16,14 +16,14 @@ MATLAB_ROOT  = c:\program files\matlab\r2024b\toolbox\stateflow\stateflow\..\..\
 BUILDARGS   = 
 #------------------------------ Include/Lib Path ------------------------------
  
-USER_INCLUDES = -I"C:\Github\TTT4145-Radiokommunikasjon\Prosjekt" -I"C:\Github\TTT4145-Radiokommunikasjon\Prosjekt\slprj\_cprj" 
+USER_INCLUDES = -I"C:\GitHub\TTT4145-Radiokommunikasjon\Prosjekt" -I"C:\GitHub\TTT4145-Radiokommunikasjon\Prosjekt\slprj\_cprj" 
 AUX_INCLUDES = 
 MLSLSF_INCLUDES  = \
     -I"C:\Program Files\MATLAB\R2024b\extern\include" \
     -I"C:\Program Files\MATLAB\R2024b\simulink\include" \
     -I"C:\Program Files\MATLAB\R2024b\rtw\c\src" 
 
-THIRD_PARTY_INCLUDES = -I"C:\Github\TTT4145-Radiokommunikasjon\Prosjekt\slprj\_cgxe\SimulinkOQPSK\src" 
+THIRD_PARTY_INCLUDES = -I"C:\GitHub\TTT4145-Radiokommunikasjon\Prosjekt\slprj\_cgxe\SimulinkOQPSK\src" 
 
 INCLUDE_PATH = $(USER_INCLUDES) $(AUX_INCLUDES) $(MLSLSF_INCLUDES) $(COMPILER_INCLUDES) $(THIRD_PARTY_INCLUDES)
  
@@ -43,7 +43,7 @@ LDFLAGS =
 AUXLDFLAGS = 
 #----------------------------- Source Files -----------------------------------
  
-THIRD_PARTY_SRCS = C:/Github/TTT414~1/Prosjekt/slprj/_cgxe/SIMULI~1/src/signLib.c  
+THIRD_PARTY_SRCS = C:/GitHub/TTT414~1/Prosjekt/slprj/_cgxe/SIMULI~1/src/signLib.c  
 REQ_SRCS  = $(MODEL_SRC) $(MODEL_REG) $(MODULE_SRCS) $(THIRD_PARTY_SRCS) 
 
 USER_OBJS =
