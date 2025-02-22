@@ -8,7 +8,7 @@ LD = $(CC)
  
 MODEL     = SimulinkOQPSK
 TARGET      = cgxe
-MODULE_SRCS   = m_hGzJoyBXd4womJwUu82PQG.c m_zTViAQ1klSrWSv6K0WhyYG.c m_GAdgY9KUhCyNS3WcZY0JdF.c
+MODULE_SRCS   = m_gGTZD1AOI6gyn0Qm1fcnkF.c m_eC2Xob0X8jcaxCPPVjmL2C.c m_pb35Ooc2hRKBKZ3sq0fzFC.c
 MODEL_SRC  = SimulinkOQPSK_cgxe.c
 MODEL_REG = SimulinkOQPSK_cgxe_registry.c
 MAKEFILE    = SimulinkOQPSK_cgxe.gmk
