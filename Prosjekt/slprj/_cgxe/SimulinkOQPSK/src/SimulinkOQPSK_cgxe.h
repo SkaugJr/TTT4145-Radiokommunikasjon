@@ -10,11 +10,11 @@
 #include "cgxert.h"
 #include "cgxeooprt.h"
 #include "slccrt.h"
-#include <time.h>
-#include <time.h>
 #include <string.h>
 #include "math.h"
 #include "signLib.h"
+#include <time.h>
+#include <time.h>
 #define rtInf                          (mxGetInf())
 #define rtMinusInf                     (-(mxGetInf()))
 #define rtNaN                          (mxGetNaN())
