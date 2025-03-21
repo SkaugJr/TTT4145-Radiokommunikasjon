@@ -68,7 +68,7 @@ blocks:
 - name: access_key
   id: variable
   parameters:
-    comment: Training til frame-sync
+    comment: Training til frame-sync, Barker
     value: '''11100001'''
   states:
     bus_sink: false
@@ -249,7 +249,7 @@ blocks:
     minoutbuf: '0'
     msg: "pmt.cons(pmt.PMT_NIL, pmt.init_u8vector(9, (70, 97, 100, 105, 110, 103,\
       \ 68, 105, 112)))\r"
-    period: '500'
+    period: '200'
   states:
     bus_sink: false
     bus_source: false
