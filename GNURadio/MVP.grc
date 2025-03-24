@@ -171,7 +171,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: 1e5
+    value: 352e3
   states:
     bus_sink: false
     bus_source: false
@@ -236,7 +236,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [80, 1240.0]
+    coordinate: [136, 1272.0]
     rotation: 180
     state: enabled
 - name: blocks_message_strobe_0
@@ -249,7 +249,7 @@ blocks:
     minoutbuf: '0'
     msg: "pmt.cons(pmt.PMT_NIL, pmt.init_u8vector(9, (70, 97, 100, 105, 110, 103,\
       \ 68, 105, 112)))\r"
-    period: '500'
+    period: '100'
   states:
     bus_sink: false
     bus_source: false
@@ -716,7 +716,7 @@ blocks:
     marker9: '0'
     name: '""'
     nconnections: '2'
-    size: '1024'
+    size: '352'
     style1: '0'
     style10: '0'
     style2: '0'
@@ -733,7 +733,7 @@ blocks:
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
     type: complex
-    update_time: '0.10'
+    update_time: '0.1'
     width1: '1'
     width10: '1'
     width2: '1'
@@ -810,7 +810,7 @@ blocks:
     marker9: '-1'
     nconnections: '1'
     samp_per_symbol: '1'
-    size: '1024'
+    size: '352'
     srate: samp_rate
     style1: '1'
     style10: '1'
@@ -829,7 +829,7 @@ blocks:
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
     type: complex
-    update_time: '0.10'
+    update_time: '0.1'
     width1: '1'
     width10: '1'
     width2: '1'
@@ -911,7 +911,7 @@ blocks:
     tr_tag: '""'
     type: complex
     units: dB
-    update_time: '0.10'
+    update_time: '0.1'
     width1: '1'
     width10: '1'
     width2: '1'
@@ -1098,7 +1098,7 @@ connections:
 - [digital_costas_loop_cc_0, '0', qtgui_const_sink_x_0, '1']
 - [digital_costas_loop_cc_0, '0', qtgui_eye_sink_x_0, '0']
 - [digital_crc_append_0, out, digital_protocol_formatter_async_0, in]
-- [digital_crc_check_0, ok, blocks_message_debug_0, print]
+- [digital_crc_check_0, ok, blocks_message_debug_0, log]
 - [digital_diff_decoder_bb_0, '0', blocks_unpack_k_bits_bb_0, '0']
 - [digital_fll_band_edge_cc_0, '0', digital_symbol_sync_xx_1, '0']
 - [digital_fll_band_edge_cc_0, '0', qtgui_freq_sink_x_0, '1']
