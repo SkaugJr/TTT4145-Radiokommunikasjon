@@ -49,7 +49,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: 863e6
+    value: 2.425e9
   states:
     bus_sink: false
     bus_source: false
@@ -74,7 +74,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 612.0]
+    coordinate: [96, 660.0]
     rotation: 0
     state: enabled
 - name: access_key
@@ -86,7 +86,19 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [392, 192.0]
+    coordinate: [376, 192.0]
+    rotation: 0
+    state: enabled
+- name: datarate
+  id: variable
+  parameters:
+    comment: ''
+    value: 44e3
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 8.0]
     rotation: 0
     state: enabled
 - name: excess_BW
@@ -98,7 +110,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [336, 8.0]
+    coordinate: [520, 8.0]
     rotation: 0
     state: enabled
 - name: hdr_format
@@ -116,13 +128,13 @@ blocks:
 - name: samp_rate
   id: variable
   parameters:
-    comment: Datarate [S/s] = samplingsrate
-    value: int(352e3)
+    comment: samplingsrate = sps * datarate
+    value: int(sps*datarate)
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [168, 8.0]
+    coordinate: [328, 8.0]
     rotation: 0
     state: enabled
 - name: sps
@@ -290,7 +302,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [320, 512.0]
+    coordinate: [408, 560.0]
     rotation: 0
     state: enabled
 - name: digital_correlate_access_code_xx_ts_0
@@ -507,7 +519,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [584, 476.0]
+    coordinate: [672, 524.0]
     rotation: 0
     state: enabled
 - name: iio_pluto_source_0
@@ -623,7 +635,7 @@ blocks:
     autoscale: 'False'
     average: '0.05'
     axislabels: 'True'
-    bw: samp_rate*(1+excess_BW)
+    bw: samp_rate
     color1: '"red"'
     color10: '"dark blue"'
     color2: '"blue"'
@@ -806,7 +818,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [32, 536.0]
+    coordinate: [120, 584.0]
     rotation: 0
     state: enabled
 
