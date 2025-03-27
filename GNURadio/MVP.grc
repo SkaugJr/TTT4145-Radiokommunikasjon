@@ -81,7 +81,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '0.35'
+    value: '0.15'
   states:
     bus_sink: false
     bus_source: false

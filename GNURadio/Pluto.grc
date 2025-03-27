@@ -628,7 +628,7 @@ blocks:
     alias: ''
     bandwidth: '20000000'
     bbdc: 'True'
-    buffer_size: '4096'
+    buffer_size: '1024'
     comment: ''
     filter: ''
     filter_source: '''Auto'''
