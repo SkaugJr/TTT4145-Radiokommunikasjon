@@ -69,20 +69,22 @@ class MVP(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
+        self.payload_size_bytes = payload_size_bytes = 30
+        self.pakker_ps = pakker_ps = 10
+        self.duty_cycle_percent = duty_cycle_percent = 1
         self.sps = sps = 8
-        self.datarate = datarate = 80e3
-        self.vindu_lengde = vindu_lengde = 8*sps
-        self.signal_lengde = signal_lengde = int(80*sps)
+        self.datarate = datarate = (payload_size_bytes+10)*8*0.5*pakker_ps/(duty_cycle_percent/100)
+        self.vindu_lengde = vindu_lengde = int((payload_size_bytes+10)*4*sps*0.1)
+        self.signal_lengde = signal_lengde = int((payload_size_bytes+10)*4*sps)
         self.samp_rate = samp_rate = int(datarate*sps)
-        self.pad_periode_ms = pad_periode_ms = 100
-        self.excess_BW = excess_BW = 0.35
-        self.access_key = access_key = '1110001101011111'
+        self.excess_BW = excess_BW = 1
+        self.access_key = access_key = '1101100111001110'
         self.vindu_taps = vindu_taps = [complex(t, t) for t in firdes.window(window.WIN_BLACKMAN, vindu_lengde, 0)]
         self.timing_offset = timing_offset = 1.0005
         self.thresh = thresh = 1
-        self.taps = taps = 11*sps
+        self.taps = taps = 22*sps
         self.rrc_taps = rrc_taps = firdes.root_raised_cosine(1.0,samp_rate,samp_rate/sps,excess_BW,11*sps)
-        self.padding = padding = (samp_rate*pad_periode_ms/1000-signal_lengde-vindu_lengde)
+        self.padding = padding = (samp_rate/pakker_ps-signal_lengde-vindu_lengde)
         self.noise_voltage = noise_voltage = 0.005
         self.hdr_format = hdr_format = digital.header_format_default(access_key, 0)
         self.freq_offset = freq_offset = 0.05
@@ -105,64 +107,13 @@ class MVP(gr.top_block, Qt.QWidget):
         self.root_raised_cosine_filter_0 = filter.interp_fir_filter_ccf(
             sps,
             firdes.root_raised_cosine(
-                9,
+                sps,
                 samp_rate,
                 (samp_rate/sps),
                 excess_BW,
                 taps))
-        self.qtgui_time_sink_x_0_1 = qtgui.time_sink_c(
-            (640*2), #size
-            samp_rate, #samp_rate
-            "", #name
-            1, #number of inputs
-            None # parent
-        )
-        self.qtgui_time_sink_x_0_1.set_update_time(0.10)
-        self.qtgui_time_sink_x_0_1.set_y_axis(-1, 1)
-
-        self.qtgui_time_sink_x_0_1.set_y_label('Amplitude', "")
-
-        self.qtgui_time_sink_x_0_1.enable_tags(True)
-        self.qtgui_time_sink_x_0_1.set_trigger_mode(qtgui.TRIG_MODE_TAG, qtgui.TRIG_SLOPE_POS, 0.5, 0, 0, "packet_len")
-        self.qtgui_time_sink_x_0_1.enable_autoscale(True)
-        self.qtgui_time_sink_x_0_1.enable_grid(True)
-        self.qtgui_time_sink_x_0_1.enable_axis_labels(True)
-        self.qtgui_time_sink_x_0_1.enable_control_panel(False)
-        self.qtgui_time_sink_x_0_1.enable_stem_plot(False)
-
-
-        labels = ['Signal 1', 'Signal 2', 'Signal 3', 'Signal 4', 'Signal 5',
-            'Signal 6', 'Signal 7', 'Signal 8', 'Signal 9', 'Signal 10']
-        widths = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        colors = ['blue', 'red', 'green', 'black', 'cyan',
-            'magenta', 'yellow', 'dark red', 'dark green', 'dark blue']
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-            1.0, 1.0, 1.0, 1.0, 1.0]
-        styles = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        markers = [-1, -1, -1, -1, -1,
-            -1, -1, -1, -1, -1]
-
-
-        for i in range(2):
-            if len(labels[i]) == 0:
-                if (i % 2 == 0):
-                    self.qtgui_time_sink_x_0_1.set_line_label(i, "Re{{Data {0}}}".format(i/2))
-                else:
-                    self.qtgui_time_sink_x_0_1.set_line_label(i, "Im{{Data {0}}}".format(i/2))
-            else:
-                self.qtgui_time_sink_x_0_1.set_line_label(i, labels[i])
-            self.qtgui_time_sink_x_0_1.set_line_width(i, widths[i])
-            self.qtgui_time_sink_x_0_1.set_line_color(i, colors[i])
-            self.qtgui_time_sink_x_0_1.set_line_style(i, styles[i])
-            self.qtgui_time_sink_x_0_1.set_line_marker(i, markers[i])
-            self.qtgui_time_sink_x_0_1.set_line_alpha(i, alphas[i])
-
-        self._qtgui_time_sink_x_0_1_win = sip.wrapinstance(self.qtgui_time_sink_x_0_1.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_time_sink_x_0_1_win)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
-            256, #size
+            ((payload_size_bytes+4)*8), #size
             samp_rate, #samp_rate
             'Correlate Output', #name
             1, #number of inputs
@@ -214,7 +165,7 @@ class MVP(gr.top_block, Qt.QWidget):
         for c in range(2, 4):
             self.top_grid_layout.setColumnStretch(c, 1)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_c(
-            (int(samp_rate*pad_periode_ms/100)), #size
+            int(samp_rate), #size
             samp_rate, #samp_rate
             "", #name
             1, #number of inputs
@@ -226,7 +177,7 @@ class MVP(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0.set_y_label('Amplitude', "")
 
         self.qtgui_time_sink_x_0.enable_tags(True)
-        self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_TAG, qtgui.TRIG_SLOPE_POS, 0.5, 0, 0, "packet_len")
+        self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_TAG, qtgui.TRIG_SLOPE_POS, 0.5, 0, 0, "burst_len")
         self.qtgui_time_sink_x_0.enable_autoscale(False)
         self.qtgui_time_sink_x_0.enable_grid(True)
         self.qtgui_time_sink_x_0.enable_axis_labels(True)
@@ -401,22 +352,22 @@ class MVP(gr.top_block, Qt.QWidget):
         self.digital_symbol_sync_xx_1 = digital.symbol_sync_cc(
             digital.TED_GARDNER,
             sps,
-            0.002,
-            (sqrt(2)/2),
-            2,
-            1.6,
+            (2*pi*0.04),
+            (sqrt(2)/4),
+            1,
+            1,
             1,
             digital.constellation_qpsk().base(),
             digital.IR_PFB_NO_MF,
-            128,
+            256,
             )
         self.digital_protocol_formatter_bb_0 = digital.protocol_formatter_bb(hdr_format, "packet_len")
-        self.digital_fll_band_edge_cc_0 = digital.fll_band_edge_cc(sps, excess_BW, taps, 0.004)
+        self.digital_fll_band_edge_cc_0 = digital.fll_band_edge_cc(sps, excess_BW, taps, 0.025)
         self.digital_diff_encoder_bb_0 = digital.diff_encoder_bb(4, digital.DIFF_DIFFERENTIAL)
         self.digital_diff_decoder_bb_0 = digital.diff_decoder_bb(4, digital.DIFF_DIFFERENTIAL)
         self.digital_crc32_bb_1 = digital.crc32_bb(True, "packet_len", True)
         self.digital_crc32_bb_0 = digital.crc32_bb(False, "packet_len", True)
-        self.digital_costas_loop_cc_0 = digital.costas_loop_cc(0.15, 4, False)
+        self.digital_costas_loop_cc_0 = digital.costas_loop_cc((2*pi*0.02), 4, False)
         self.digital_correlate_access_code_xx_ts_0 = digital.correlate_access_code_bb_ts(access_key,
           thresh, 'packet_len')
         self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(QPSK)
@@ -435,7 +386,7 @@ class MVP(gr.top_block, Qt.QWidget):
         self.blocks_tagged_stream_mux_0_0_0 = blocks.tagged_stream_mux(gr.sizeof_char*1, 'packet_len', 0)
         self.blocks_tagged_stream_multiply_length_0 = blocks.tagged_stream_multiply_length(gr.sizeof_gr_complex*1, 'packet_len', 4)
         self.blocks_stream_to_tagged_stream_1 = blocks.stream_to_tagged_stream(gr.sizeof_gr_complex, 1, signal_lengde, "burst_len")
-        self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, 10, "packet_len")
+        self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, payload_size_bytes, "packet_len")
         self.blocks_skiphead_0_0 = blocks.skiphead(gr.sizeof_gr_complex*1, (int(taps/2)))
         self.blocks_repack_bits_bb_0_0 = blocks.repack_bits_bb(1, 8, "packet_len", True, gr.GR_MSB_FIRST)
         self.blocks_repack_bits_bb_0 = blocks.repack_bits_bb(8, 1, "packet_len", False, gr.GR_MSB_FIRST)
@@ -458,7 +409,6 @@ class MVP(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_skiphead_0_0, 0), (self.blocks_tagged_stream_multiply_length_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.digital_crc32_bb_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_1, 0), (self.digital_burst_shaper_xx_0, 0))
-        self.connect((self.blocks_stream_to_tagged_stream_1, 0), (self.qtgui_time_sink_x_0_1, 0))
         self.connect((self.blocks_tagged_stream_multiply_length_0, 0), (self.blocks_stream_to_tagged_stream_1, 0))
         self.connect((self.blocks_tagged_stream_mux_0_0_0, 0), (self.blocks_repack_bits_bb_0, 0))
         self.connect((self.blocks_throttle2_0, 0), (self.channels_channel_model_0, 0))
@@ -497,6 +447,32 @@ class MVP(gr.top_block, Qt.QWidget):
 
         event.accept()
 
+    def get_payload_size_bytes(self):
+        return self.payload_size_bytes
+
+    def set_payload_size_bytes(self, payload_size_bytes):
+        self.payload_size_bytes = payload_size_bytes
+        self.set_datarate((self.payload_size_bytes+10)*8*0.5*self.pakker_ps/(self.duty_cycle_percent/100))
+        self.set_signal_lengde(int((self.payload_size_bytes+10)*4*self.sps))
+        self.set_vindu_lengde(int((self.payload_size_bytes+10)*4*self.sps*0.1))
+        self.blocks_stream_to_tagged_stream_0.set_packet_len(self.payload_size_bytes)
+        self.blocks_stream_to_tagged_stream_0.set_packet_len_pmt(self.payload_size_bytes)
+
+    def get_pakker_ps(self):
+        return self.pakker_ps
+
+    def set_pakker_ps(self, pakker_ps):
+        self.pakker_ps = pakker_ps
+        self.set_datarate((self.payload_size_bytes+10)*8*0.5*self.pakker_ps/(self.duty_cycle_percent/100))
+        self.set_padding((self.samp_rate/self.pakker_ps-self.signal_lengde-self.vindu_lengde))
+
+    def get_duty_cycle_percent(self):
+        return self.duty_cycle_percent
+
+    def set_duty_cycle_percent(self, duty_cycle_percent):
+        self.duty_cycle_percent = duty_cycle_percent
+        self.set_datarate((self.payload_size_bytes+10)*8*0.5*self.pakker_ps/(self.duty_cycle_percent/100))
+
     def get_sps(self):
         return self.sps
 
@@ -504,11 +480,11 @@ class MVP(gr.top_block, Qt.QWidget):
         self.sps = sps
         self.set_rrc_taps(firdes.root_raised_cosine(1.0,self.samp_rate,self.samp_rate/self.sps,self.excess_BW,11*self.sps))
         self.set_samp_rate(int(self.datarate*self.sps))
-        self.set_signal_lengde(int(80*self.sps))
-        self.set_taps(11*self.sps)
-        self.set_vindu_lengde(8*self.sps)
+        self.set_signal_lengde(int((self.payload_size_bytes+10)*4*self.sps))
+        self.set_taps(22*self.sps)
+        self.set_vindu_lengde(int((self.payload_size_bytes+10)*4*self.sps*0.1))
         self.digital_symbol_sync_xx_1.set_sps(self.sps)
-        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(9, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
+        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(self.sps, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
 
     def get_datarate(self):
         return self.datarate
@@ -522,7 +498,7 @@ class MVP(gr.top_block, Qt.QWidget):
 
     def set_vindu_lengde(self, vindu_lengde):
         self.vindu_lengde = vindu_lengde
-        self.set_padding((self.samp_rate*self.pad_periode_ms/1000-self.signal_lengde-self.vindu_lengde))
+        self.set_padding((self.samp_rate/self.pakker_ps-self.signal_lengde-self.vindu_lengde))
         self.set_vindu_taps([complex(t, t) for t in firdes.window(window.WIN_BLACKMAN, self.vindu_lengde, 0)])
 
     def get_signal_lengde(self):
@@ -530,7 +506,7 @@ class MVP(gr.top_block, Qt.QWidget):
 
     def set_signal_lengde(self, signal_lengde):
         self.signal_lengde = signal_lengde
-        self.set_padding((self.samp_rate*self.pad_periode_ms/1000-self.signal_lengde-self.vindu_lengde))
+        self.set_padding((self.samp_rate/self.pakker_ps-self.signal_lengde-self.vindu_lengde))
         self.blocks_stream_to_tagged_stream_1.set_packet_len(self.signal_lengde)
         self.blocks_stream_to_tagged_stream_1.set_packet_len_pmt(self.signal_lengde)
 
@@ -539,22 +515,14 @@ class MVP(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.set_padding((self.samp_rate*self.pad_periode_ms/1000-self.signal_lengde-self.vindu_lengde))
+        self.set_padding((self.samp_rate/self.pakker_ps-self.signal_lengde-self.vindu_lengde))
         self.set_rrc_taps(firdes.root_raised_cosine(1.0,self.samp_rate,self.samp_rate/self.sps,self.excess_BW,11*self.sps))
         self.blocks_throttle2_0.set_sample_rate(self.samp_rate)
         self.qtgui_eye_sink_x_0.set_samp_rate(self.samp_rate)
         self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
-        self.qtgui_time_sink_x_0_1.set_samp_rate(self.samp_rate)
-        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(9, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
-
-    def get_pad_periode_ms(self):
-        return self.pad_periode_ms
-
-    def set_pad_periode_ms(self, pad_periode_ms):
-        self.pad_periode_ms = pad_periode_ms
-        self.set_padding((self.samp_rate*self.pad_periode_ms/1000-self.signal_lengde-self.vindu_lengde))
+        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(self.sps, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
 
     def get_excess_BW(self):
         return self.excess_BW
@@ -562,7 +530,7 @@ class MVP(gr.top_block, Qt.QWidget):
     def set_excess_BW(self, excess_BW):
         self.excess_BW = excess_BW
         self.set_rrc_taps(firdes.root_raised_cosine(1.0,self.samp_rate,self.samp_rate/self.sps,self.excess_BW,11*self.sps))
-        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(9, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
+        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(self.sps, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
 
     def get_access_key(self):
         return self.access_key
@@ -595,7 +563,7 @@ class MVP(gr.top_block, Qt.QWidget):
 
     def set_taps(self, taps):
         self.taps = taps
-        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(9, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
+        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(self.sps, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
 
     def get_rrc_taps(self):
         return self.rrc_taps
