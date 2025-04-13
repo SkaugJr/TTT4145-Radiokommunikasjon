@@ -42,7 +42,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [152, 160.0]
+    coordinate: [0, 216.0]
     rotation: 0
     state: enabled
 - name: QPSK
@@ -76,43 +76,55 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [256, 80.0]
+    coordinate: [264, 112.0]
+    rotation: 0
+    state: enabled
+- name: crc_size
+  id: variable
+  parameters:
+    comment: ''
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [520, 456.0]
     rotation: 0
     state: enabled
 - name: datarate
   id: variable
   parameters:
     comment: ''
-    value: (payload_size_bytes+10)*8*0.5*pakker_ps/(duty_cycle_percent/100)
+    value: (header_size + payload_size_bytes+crc_size)*8*0.5*pakker_ps/(duty_cycle_percent/100)
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [176, 8.0]
+    coordinate: [192, 8.0]
     rotation: 0
     state: enabled
 - name: duty_cycle_percent
   id: variable
   parameters:
     comment: ''
-    value: '1'
+    value: '4'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [408, 224.0]
+    coordinate: [408, 256.0]
     rotation: 0
     state: enabled
 - name: excess_BW
   id: variable
   parameters:
     comment: ''
-    value: '1'
+    value: '0.45'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 8.0]
+    coordinate: [424, 8.0]
     rotation: 0
     state: enabled
 - name: hdr_format
@@ -124,7 +136,19 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [424, 80.0]
+    coordinate: [432, 112.0]
+    rotation: 0
+    state: enabled
+- name: header_size
+  id: variable
+  parameters:
+    comment: ''
+    value: '6'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [768, 168.0]
     rotation: 0
     state: enabled
 - name: padding
@@ -136,10 +160,22 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1552, 632.0]
+    coordinate: [1552, 680.0]
     rotation: 0
     state: enabled
 - name: pakker_ps
+  id: variable
+  parameters:
+    comment: ''
+    value: '40'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [328, 280.0]
+    rotation: 0
+    state: enabled
+- name: payload_size_bytes
   id: variable
   parameters:
     comment: ''
@@ -148,31 +184,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 248.0]
-    rotation: 0
-    state: enabled
-- name: payload_size_bytes
-  id: variable
-  parameters:
-    comment: ''
-    value: '30'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [208, 256.0]
-    rotation: 0
-    state: enabled
-- name: rrc_taps
-  id: variable
-  parameters:
-    comment: ''
-    value: firdes.root_raised_cosine(1.0,samp_rate,samp_rate/sps,excess_BW,11*sps)
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [576, 8.0]
+    coordinate: [208, 304.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -184,43 +196,45 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [320, 8.0]
+    coordinate: [336, 8.0]
     rotation: 0
     state: enabled
 - name: signal_lengde
   id: variable
   parameters:
     comment: ''
-    value: int((payload_size_bytes+10)*4*sps)
+    value: int((header_size+payload_size_bytes+crc_size)*4*sps)
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1424, 480.0]
+    coordinate: [1424, 528.0]
     rotation: 0
     state: enabled
 - name: sps
   id: variable
   parameters:
     comment: ''
-    value: '8'
+    value: '6'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [256, 8.0]
+    coordinate: [272, 8.0]
     rotation: 0
     state: enabled
 - name: taps
   id: variable
   parameters:
-    comment: ''
-    value: 60*sps
+    comment: 'span * sps
+
+      span = antall symboler om gangen'
+    value: sps*8
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [504, 8.0]
+    coordinate: [512, 8.0]
     rotation: 0
     state: enabled
 - name: thresh
@@ -232,19 +246,19 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [184, 80.0]
+    coordinate: [192, 112.0]
     rotation: 0
     state: enabled
 - name: vindu_lengde
   id: variable
   parameters:
     comment: "10 % av pakkelengde ramp up \n 10 % av pakkelengde ramp ned"
-    value: int((payload_size_bytes+10)*4*sps*0.1)
+    value: int(signal_lengde*0.2)
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1776, 632.0]
+    coordinate: [1776, 680.0]
     rotation: 0
     state: enabled
 - name: vindu_taps
@@ -257,7 +271,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1640, 632.0]
+    coordinate: [1640, 680.0]
     rotation: 0
     state: enabled
 - name: blocks_file_sink_0
@@ -285,19 +299,19 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: datapakker.txt
+    file: TxData/datapakker10bytesCounter
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
     offset: '0'
-    repeat: 'True'
+    repeat: 'False'
     type: byte
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 304.0]
+    coordinate: [16, 352.0]
     rotation: 0
     state: enabled
 - name: blocks_message_debug_0
@@ -328,7 +342,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [152, 536.0]
+    coordinate: [152, 584.0]
     rotation: 0
     state: enabled
 - name: blocks_repack_bits_bb_0
@@ -348,7 +362,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1176, 312.0]
+    coordinate: [1176, 360.0]
     rotation: 0
     state: enabled
 - name: blocks_repack_bits_bb_1
@@ -386,7 +400,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [896, 536.0]
+    coordinate: [896, 584.0]
     rotation: 0
     state: enabled
 - name: blocks_stream_to_tagged_stream_0
@@ -405,7 +419,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [208, 328.0]
+    coordinate: [208, 376.0]
     rotation: 0
     state: enabled
 - name: blocks_stream_to_tagged_stream_1
@@ -424,7 +438,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1376, 544.0]
+    coordinate: [1376, 592.0]
     rotation: 0
     state: enabled
 - name: blocks_tagged_stream_multiply_length_0
@@ -443,7 +457,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1104, 544.0]
+    coordinate: [1104, 592.0]
     rotation: 0
     state: enabled
 - name: blocks_tagged_stream_mux_0_0_0
@@ -451,7 +465,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    comment: payload + 10 bytes
+    comment: payload + 16 bytes
     lengthtagname: packet_len
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -463,7 +477,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [936, 312.0]
+    coordinate: [936, 360.0]
     rotation: 0
     state: true
 - name: blocks_uchar_to_float_0_0_0
@@ -515,7 +529,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1632, 520.0]
+    coordinate: [1632, 568.0]
     rotation: 0
     state: enabled
 - name: digital_constellation_decoder_cb_0
@@ -547,7 +561,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [456, 536.0]
+    coordinate: [456, 584.0]
     rotation: 0
     state: enabled
 - name: digital_correlate_access_code_xx_ts_0
@@ -574,17 +588,18 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    comment: FFC + Fase
+    comment: "FFC + Fase\nH\xF8y LBW: rask respons  st\xF8y sensitiv\nLav LBW: treig\
+      \ respons, st\xF8y insensitiv"
     maxoutbuf: '0'
     minoutbuf: '0'
     order: '4'
     use_snr: 'False'
-    w: 2*pi*0.02
+    w: '0.225'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1000, 928.0]
+    coordinate: [1128, 904.0]
     rotation: 0
     state: enabled
 - name: digital_crc32_bb_0
@@ -602,7 +617,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [440, 320.0]
+    coordinate: [440, 368.0]
     rotation: 0
     state: enabled
 - name: digital_crc32_bb_1
@@ -654,7 +669,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [280, 528.0]
+    coordinate: [280, 576.0]
     rotation: 0
     state: enabled
 - name: digital_fll_band_edge_cc_0
@@ -662,19 +677,19 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    comment: CFC
-    filter_size: taps
+    comment: CFC + RRC filter
+    filter_size: '24'
     maxoutbuf: '0'
     minoutbuf: '0'
     rolloff: excess_BW
     samps_per_sym: sps
     type: cc
-    w: '0.025'
+    w: '0.1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [304, 920.0]
+    coordinate: [264, 920.0]
     rotation: 0
     state: enabled
 - name: digital_protocol_formatter_bb_0
@@ -695,7 +710,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [680, 192.0]
+    coordinate: [696, 240.0]
     rotation: 0
     state: enabled
 - name: digital_symbol_sync_xx_1
@@ -703,18 +718,18 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    comment: Gardner > ML, ved burst transmisjon
-    constellation: digital.constellation_bpsk().base()
+    comment: ''
+    constellation: digital.constellation_qpsk().base()
     damping: sqrt(2)/2
-    loop_bw: 2*pi*0.04
-    max_dev: '1.6'
+    loop_bw: 2*pi*0.03
+    max_dev: '1.5'
     maxoutbuf: '0'
     minoutbuf: '0'
-    nfilters: '256'
+    nfilters: '128'
     osps: '1'
     pfb_mf_taps: ''
     resamp_type: digital.IR_PFB_NO_MF
-    sps: sps
+    sps: '2'
     ted_gain: '1'
     ted_type: digital.TED_GARDNER
     type: cc
@@ -722,7 +737,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [560, 892.0]
+    coordinate: [744, 908.0]
     rotation: 0
     state: enabled
 - name: iio_pluto_sink_0
@@ -748,7 +763,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1896, 492.0]
+    coordinate: [1896, 540.0]
     rotation: 0
     state: enabled
 - name: iio_pluto_source_0
@@ -767,7 +782,7 @@ blocks:
     fpass: '0'
     frequency: int(LO_freq)
     fstop: '0'
-    gain1: '''fast_attack'''
+    gain1: '''slow_attack'''
     len_tag_key: '"packet_len"'
     manual_gain1: '64'
     maxoutbuf: '0'
@@ -1031,10 +1046,10 @@ blocks:
     alpha8: '1.0'
     alpha9: '1.0'
     autoscale: 'False'
-    average: '0.05'
+    average: '0.2'
     axislabels: 'True'
-    bw: samp_rate
-    color1: '"red"'
+    bw: samp_rate/(sps/2)
+    color1: '"blue"'
     color10: '"dark blue"'
     color2: '"blue"'
     color3: '"green"'
@@ -1044,7 +1059,7 @@ blocks:
     color7: '"yellow"'
     color8: '"dark red"'
     color9: '"dark green"'
-    comment: ''
+    comment: Signal BW = +- (1+excess_BW)* datarate/2
     ctrlpanel: 'False'
     fc: '0'
     fftsize: '4096'
@@ -1052,10 +1067,10 @@ blocks:
     grid: 'False'
     gui_hint: ''
     label: Relative Gain
-    label1: "F\xF8r CFC"
+    label1: Etter CFC + RRC
     label10: ''''''
-    label2: Etter CFC
-    label3: ''''''
+    label2: Etter CFC + RRC
+    label3: Tx
     label4: ''''''
     label5: ''''''
     label6: ''''''
@@ -1066,8 +1081,8 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     name: '""'
-    nconnections: '2'
-    norm_window: 'False'
+    nconnections: '1'
+    norm_window: 'True'
     showports: 'False'
     tr_chan: '0'
     tr_level: '0.0'
@@ -1075,7 +1090,7 @@ blocks:
     tr_tag: '""'
     type: complex
     units: dB
-    update_time: '0.10'
+    update_time: '0.1'
     width1: '1'
     width10: '1'
     width2: '1'
@@ -1088,12 +1103,12 @@ blocks:
     width9: '1'
     wintype: window.WIN_BLACKMAN_hARRIS
     ymax: '10'
-    ymin: '-140'
+    ymin: '-160'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [512, 752.0]
+    coordinate: [744, 728.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0_0
@@ -1213,7 +1228,30 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [688, 496.0]
+    coordinate: [688, 544.0]
+    rotation: 0
+    state: enabled
+- name: root_raised_cosine_filter_0_0
+  id: root_raised_cosine_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: excess_BW
+    comment: ''
+    decim: int(sps/2)
+    gain: '1'
+    interp: sps
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ntaps: taps
+    samp_rate: samp_rate
+    sym_rate: samp_rate/sps
+    type: fir_filter_ccf
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [512, 872.0]
     rotation: 0
     state: enabled
 - name: virtual_sink_0_2_1
@@ -1226,7 +1264,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1360, 320.0]
+    coordinate: [1360, 368.0]
     rotation: 0
     state: enabled
 - name: virtual_source_1
@@ -1239,7 +1277,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [0, 536.0]
+    coordinate: [0, 584.0]
     rotation: 0
     state: enabled
 
@@ -1270,15 +1308,15 @@ connections:
 - [digital_crc32_bb_1, '0', pdu_tagged_stream_to_pdu_2, '0']
 - [digital_diff_decoder_bb_0, '0', blocks_unpack_k_bits_bb_0, '0']
 - [digital_diff_encoder_bb_0, '0', digital_constellation_encoder_bc_0, '0']
-- [digital_fll_band_edge_cc_0, '0', digital_symbol_sync_xx_1, '0']
-- [digital_fll_band_edge_cc_0, '0', qtgui_freq_sink_x_0, '1']
+- [digital_fll_band_edge_cc_0, '0', root_raised_cosine_filter_0_0, '0']
 - [digital_protocol_formatter_bb_0, '0', blocks_tagged_stream_mux_0_0_0, '0']
 - [digital_symbol_sync_xx_1, '0', digital_costas_loop_cc_0, '0']
 - [digital_symbol_sync_xx_1, '0', qtgui_const_sink_x_0_0, '0']
 - [iio_pluto_source_0, '0', digital_fll_band_edge_cc_0, '0']
-- [iio_pluto_source_0, '0', qtgui_freq_sink_x_0, '0']
 - [pdu_tagged_stream_to_pdu_2, pdus, blocks_message_debug_0, log]
 - [root_raised_cosine_filter_0, '0', blocks_skiphead_0_0, '0']
+- [root_raised_cosine_filter_0_0, '0', digital_symbol_sync_xx_1, '0']
+- [root_raised_cosine_filter_0_0, '0', qtgui_freq_sink_x_0, '0']
 - [virtual_source_1, '0', blocks_pack_k_bits_bb_0, '0']
 
 metadata:
