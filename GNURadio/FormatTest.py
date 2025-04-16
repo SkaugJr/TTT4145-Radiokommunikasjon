@@ -69,7 +69,7 @@ class FormatTest(gr.top_block, Qt.QWidget):
         ##################################################
         self.sps = sps = 8
         self.datarate = datarate = 80e3
-        self.vindu_lengde = vindu_lengde = 8*sps
+        self.vindu_lengde = vindu_lengde = 12*sps
         self.taps = taps = 11*sps
         self.signal_lengde = signal_lengde = int(80*sps)
         self.samp_rate = samp_rate = int(datarate*sps)
@@ -97,8 +97,8 @@ class FormatTest(gr.top_block, Qt.QWidget):
                 excess_BW,
                 taps))
         self.qtgui_time_sink_x_0_1_0 = qtgui.time_sink_c(
-            (int(samp_rate/2)), #size
-            samp_rate, #samp_rate
+            (int(samp_rate/8/5)), #size
+            samp_rate/8, #samp_rate
             "", #name
             1, #number of inputs
             None # parent
@@ -304,7 +304,7 @@ class FormatTest(gr.top_block, Qt.QWidget):
         self.pdu_tagged_stream_to_pdu_2 = pdu.tagged_stream_to_pdu(gr.types.byte_t, 'packet_len')
         self.mmse_resampler_xx_0 = filter.mmse_resampler_cc(0, 8)
         self.fir_filter_xxx_0 = filter.fir_filter_ccf(1, rrc_taps)
-        self.fir_filter_xxx_0.declare_sample_delay((int(taps/2)))
+        self.fir_filter_xxx_0.declare_sample_delay(0)
         self.digital_protocol_formatter_bb_0 = digital.protocol_formatter_bb(hdr_format, "packet_len")
         self.digital_diff_encoder_bb_0 = digital.diff_encoder_bb(4, digital.DIFF_DIFFERENTIAL)
         self.digital_diff_decoder_bb_0 = digital.diff_decoder_bb(4, digital.DIFF_DIFFERENTIAL)
@@ -327,7 +327,7 @@ class FormatTest(gr.top_block, Qt.QWidget):
         self.blocks_repack_bits_bb_0 = blocks.repack_bits_bb(8, 1, "packet_len", False, gr.GR_MSB_FIRST)
         self.blocks_pack_k_bits_bb_0 = blocks.pack_k_bits_bb(2)
         self.blocks_message_debug_0 = blocks.message_debug(True, gr.log_levels.info)
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, 'datapakker.txt', True, 0, 0)
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, 'TxData/datapakker10bytesCounter', True, 0, 0)
         self.blocks_file_source_0.set_begin_tag(pmt.PMT_NIL)
         self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, 'RxData.txt', False)
         self.blocks_file_sink_0.set_unbuffered(False)
@@ -386,7 +386,7 @@ class FormatTest(gr.top_block, Qt.QWidget):
         self.set_samp_rate(int(self.datarate*self.sps))
         self.set_signal_lengde(int(80*self.sps))
         self.set_taps(11*self.sps)
-        self.set_vindu_lengde(8*self.sps)
+        self.set_vindu_lengde(12*self.sps)
         self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(9, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
 
     def get_datarate(self):
@@ -432,7 +432,7 @@ class FormatTest(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_1.set_samp_rate(self.samp_rate)
-        self.qtgui_time_sink_x_0_1_0.set_samp_rate(self.samp_rate)
+        self.qtgui_time_sink_x_0_1_0.set_samp_rate(self.samp_rate/8)
         self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(9, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
 
     def get_pad_periode_ms(self):

@@ -201,7 +201,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: 8*sps
+    value: 12*sps
   states:
     bus_sink: false
     bus_source: false
@@ -247,7 +247,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: datapakker.txt
+    file: TxData/datapakker10bytesCounter
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -654,14 +654,14 @@ blocks:
     decim: '1'
     maxoutbuf: '0'
     minoutbuf: '0'
-    samp_delay: int(taps/2)
+    samp_delay: '0'
     taps: rrc_taps
     type: ccf
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1144, 944.0]
+    coordinate: [1056, 944.0]
     rotation: 0
     state: enabled
 - name: import_0
@@ -1071,8 +1071,8 @@ blocks:
     marker9: '-1'
     name: '""'
     nconnections: '1'
-    size: int(samp_rate/2)
-    srate: samp_rate
+    size: int(samp_rate/8/5)
+    srate: samp_rate/8
     stemplot: 'False'
     style1: '1'
     style10: '1'

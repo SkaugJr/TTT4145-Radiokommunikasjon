@@ -259,7 +259,7 @@ blocks:
     comment: 'span * sps
 
       span = antall symboler om gangen'
-    value: sps*8
+    value: sps*11
   states:
     bus_sink: false
     bus_source: false
@@ -325,6 +325,26 @@ blocks:
     coordinate: [1640, 640.0]
     rotation: 0
     state: enabled
+- name: analog_pwr_squelch_xx_0
+  id: analog_pwr_squelch_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '0.15'
+    comment: ''
+    gate: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ramp: '0'
+    threshold: '-3'
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [136, 912.0]
+    rotation: 0
+    state: enabled
 - name: blocks_file_sink_0
   id: blocks_file_sink
   parameters:
@@ -362,7 +382,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 312.0]
+    coordinate: [0, 312.0]
     rotation: 0
     state: enabled
 - name: blocks_message_debug_0
@@ -638,7 +658,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1576, 952.0]
+    coordinate: [1576, 960.0]
     rotation: 0
     state: enabled
 - name: digital_constellation_encoder_bc_0
@@ -687,12 +707,12 @@ blocks:
     minoutbuf: '0'
     order: '4'
     use_snr: 'False'
-    w: '0.225'
+    w: '0.125'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1152, 960.0]
+    coordinate: [1160, 968.0]
     rotation: 0
     state: enabled
 - name: digital_crc32_bb_0
@@ -771,18 +791,18 @@ blocks:
     affinity: ''
     alias: ''
     comment: CFC + RRC filter
-    filter_size: '24'
+    filter_size: '30'
     maxoutbuf: '0'
     minoutbuf: '0'
     rolloff: excess_BW
     samps_per_sym: sps
     type: cc
-    w: '0.05'
+    w: '0.125'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [264, 984.0]
+    coordinate: [288, 984.0]
     rotation: 0
     state: enabled
 - name: digital_protocol_formatter_bb_0
@@ -815,10 +835,10 @@ blocks:
     constellation: digital.constellation_qpsk().base()
     damping: sqrt(2)/2
     loop_bw: 2*pi*0.03
-    max_dev: '1.5'
+    max_dev: '1'
     maxoutbuf: '0'
     minoutbuf: '0'
-    nfilters: '256'
+    nfilters: '32'
     osps: '1'
     pfb_mf_taps: ''
     resamp_type: digital.IR_PFB_NO_MF
@@ -929,7 +949,7 @@ blocks:
     marker9: '0'
     name: '""'
     nconnections: '2'
-    size: '8192'
+    size: int(signal_lengde/2)
     style1: '0'
     style10: '0'
     style2: '0'
@@ -1023,7 +1043,7 @@ blocks:
     marker9: '-1'
     nconnections: '1'
     samp_per_symbol: '1'
-    size: '8192'
+    size: int(signal_lengde/2)
     srate: samp_rate
     style1: '1'
     style10: '1'
@@ -1421,7 +1441,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 1024.0]
+    coordinate: [0, 1024.0]
     rotation: 0
     state: enabled
 - name: virtual_source_1
@@ -1439,6 +1459,7 @@ blocks:
     state: enabled
 
 connections:
+- [analog_pwr_squelch_xx_0, '0', digital_fll_band_edge_cc_0, '0']
 - [blocks_file_source_0, '0', blocks_stream_to_tagged_stream_0, '0']
 - [blocks_pack_k_bits_bb_0, '0', digital_diff_encoder_bb_0, '0']
 - [blocks_repack_bits_bb_0, '0', virtual_sink_0_2_1, '0']
@@ -1476,7 +1497,7 @@ connections:
 - [root_raised_cosine_filter_0, '0', blocks_skiphead_0_0, '0']
 - [root_raised_cosine_filter_0_0, '0', digital_symbol_sync_xx_1, '0']
 - [root_raised_cosine_filter_0_0, '0', qtgui_freq_sink_x_0, '0']
-- [virtual_source_0, '0', digital_fll_band_edge_cc_0, '0']
+- [virtual_source_0, '0', analog_pwr_squelch_xx_0, '0']
 - [virtual_source_1, '0', blocks_pack_k_bits_bb_0, '0']
 
 metadata:
