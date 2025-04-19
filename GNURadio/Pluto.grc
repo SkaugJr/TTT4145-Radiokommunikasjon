@@ -119,7 +119,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '0.6'
+    value: '0.45'
   states:
     bus_sink: false
     bus_source: false
@@ -229,7 +229,7 @@ blocks:
     comment: 'span * sps
 
       span = antall symboler om gangen'
-    value: sps*15
+    value: sps*4
   states:
     bus_sink: false
     bus_source: false
@@ -279,7 +279,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    alpha: '0.15'
+    alpha: '0.25'
     comment: ''
     gate: 'True'
     maxoutbuf: '0'
@@ -698,13 +698,13 @@ blocks:
     affinity: ''
     alias: ''
     comment: CFC
-    filter_size: 11*sps
+    filter_size: '32'
     maxoutbuf: '0'
     minoutbuf: '0'
     rolloff: excess_BW
     samps_per_sym: sps
     type: cc
-    w: '0.025'
+    w: '0.05'
   states:
     bus_sink: false
     bus_source: false

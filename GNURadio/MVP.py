@@ -14,7 +14,6 @@ from gnuradio import qtgui
 from PyQt5 import QtCore
 from gnuradio import analog
 from gnuradio import blocks
-import pmt
 from gnuradio import blocks, gr
 from gnuradio import channels
 from gnuradio.filter import firdes
@@ -70,7 +69,7 @@ class MVP(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.sps = sps = 6
+        self.sps = sps = 8
         self.payload_size_bytes = payload_size_bytes = 10
         self.pakker_ps = pakker_ps = 40
         self.header_size = header_size = 6
@@ -81,15 +80,16 @@ class MVP(gr.top_block, Qt.QWidget):
         self.vindu_lengde = vindu_lengde = int(signal_lengde*0.2)
         self.samp_rate = samp_rate = int(datarate*sps)
         self.access_key = access_key = '1101100111001110'
-        self.vindu_taps = vindu_taps = [complex(t, t) for t in firdes.window(window.WIN_BLACKMAN, vindu_lengde, 0)]
+        self.vindu_taps = vindu_taps = [complex(t, t) for t in firdes.window(window.WIN_HANN, vindu_lengde, 0)]
         self.timing_offset = timing_offset = 1.0005
         self.thresh = thresh = 1
-        self.taps = taps = sps*11
+        self.taps = taps = sps*4
         self.padding = padding = (samp_rate/pakker_ps-signal_lengde-vindu_lengde)
         self.noise_voltage = noise_voltage = 0.005
         self.hdr_format = hdr_format = digital.header_format_default(access_key, 0)
         self.freq_offset = freq_offset = 0.05
         self.excess_BW = excess_BW = 0.45
+        self.decimation = decimation = int(sps/2)
         self.QPSK = QPSK = digital.constellation_rect([0.707+0.707j, -0.707+0.707j, -0.707-0.707j, 0.707-0.707j], [0,1,2,3],
         4, 2, 2, 1, 1).base()
 
@@ -107,7 +107,7 @@ class MVP(gr.top_block, Qt.QWidget):
         self._freq_offset_win = qtgui.RangeWidget(self._freq_offset_range, self.set_freq_offset, "Channel: Frequency Offset", "counter_slider", float, QtCore.Qt.Horizontal)
         self.top_layout.addWidget(self._freq_offset_win)
         self.root_raised_cosine_filter_0_0 = filter.fir_filter_ccf(
-            (int(sps/2)),
+            decimation,
             firdes.root_raised_cosine(
                 1,
                 samp_rate,
@@ -227,15 +227,15 @@ class MVP(gr.top_block, Qt.QWidget):
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
             4096, #size
-            window.WIN_BLACKMAN_hARRIS, #wintype
+            window.WIN_HANN, #wintype
             0, #fc
-            (samp_rate/(sps/2)), #bw
+            (samp_rate/decimation), #bw
             "", #name
             1,
             None # parent
         )
         self.qtgui_freq_sink_x_0.set_update_time(0.1)
-        self.qtgui_freq_sink_x_0.set_y_axis((-160), 10)
+        self.qtgui_freq_sink_x_0.set_y_axis((-140), (-20))
         self.qtgui_freq_sink_x_0.set_y_label('Relative Gain', 'dB')
         self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
         self.qtgui_freq_sink_x_0.enable_autoscale(False)
@@ -243,7 +243,7 @@ class MVP(gr.top_block, Qt.QWidget):
         self.qtgui_freq_sink_x_0.set_fft_average(0.2)
         self.qtgui_freq_sink_x_0.enable_axis_labels(True)
         self.qtgui_freq_sink_x_0.enable_control_panel(False)
-        self.qtgui_freq_sink_x_0.set_fft_window_normalized(True)
+        self.qtgui_freq_sink_x_0.set_fft_window_normalized(False)
 
 
 
@@ -362,22 +362,22 @@ class MVP(gr.top_block, Qt.QWidget):
         self.digital_symbol_sync_xx_1 = digital.symbol_sync_cc(
             digital.TED_GARDNER,
             2,
-            (2*pi*0.03),
+            (2*pi*0.025),
             (sqrt(2)/2),
             1,
-            1,
+            1.5,
             1,
             digital.constellation_qpsk().base(),
-            digital.IR_PFB_NO_MF,
+            digital.IR_MMSE_8TAP,
             32,
             )
         self.digital_protocol_formatter_bb_0 = digital.protocol_formatter_bb(hdr_format, "packet_len")
-        self.digital_fll_band_edge_cc_0 = digital.fll_band_edge_cc(sps, excess_BW, 30, 0.125)
+        self.digital_fll_band_edge_cc_0 = digital.fll_band_edge_cc(sps, excess_BW, 64, 0.05)
         self.digital_diff_encoder_bb_0 = digital.diff_encoder_bb(4, digital.DIFF_DIFFERENTIAL)
         self.digital_diff_decoder_bb_0 = digital.diff_decoder_bb(4, digital.DIFF_DIFFERENTIAL)
         self.digital_crc32_bb_1 = digital.crc32_bb(True, "packet_len", True)
         self.digital_crc32_bb_0 = digital.crc32_bb(False, "packet_len", True)
-        self.digital_costas_loop_cc_0 = digital.costas_loop_cc(0.125, 4, False)
+        self.digital_costas_loop_cc_0 = digital.costas_loop_cc((2*pi*0.04), 4, False)
         self.digital_correlate_access_code_xx_ts_0 = digital.correlate_access_code_bb_ts(access_key,
           thresh, 'packet_len')
         self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(QPSK)
@@ -402,11 +402,13 @@ class MVP(gr.top_block, Qt.QWidget):
         self.blocks_repack_bits_bb_0 = blocks.repack_bits_bb(8, 1, "packet_len", False, gr.GR_MSB_FIRST)
         self.blocks_pack_k_bits_bb_0 = blocks.pack_k_bits_bb(2)
         self.blocks_message_debug_0 = blocks.message_debug(True, gr.log_levels.info)
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, 'TxData/datapakker10bytesCounter', False, 0, 0)
-        self.blocks_file_source_0.set_begin_tag(pmt.PMT_NIL)
+        self.blocks_head_0 = blocks.head(gr.sizeof_gr_complex*1, samp_rate)
+        self.blocks_file_sink_1 = blocks.file_sink(gr.sizeof_gr_complex*1, 'SimData/TxBurstData.bin', False)
+        self.blocks_file_sink_1.set_unbuffered(False)
         self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_char*1, 'RxData.txt', False)
         self.blocks_file_sink_0.set_unbuffered(False)
-        self.analog_pwr_squelch_xx_0 = analog.pwr_squelch_cc((-3), 0.15, 0, True)
+        self.analog_random_uniform_source_x_0 = analog.random_uniform_source_b(0, 256, 0)
+        self.analog_pwr_squelch_xx_0 = analog.pwr_squelch_cc((-4), 0.25, 0, True)
 
 
         ##################################################
@@ -414,7 +416,8 @@ class MVP(gr.top_block, Qt.QWidget):
         ##################################################
         self.msg_connect((self.pdu_tagged_stream_to_pdu_2, 'pdus'), (self.blocks_message_debug_0, 'log'))
         self.connect((self.analog_pwr_squelch_xx_0, 0), (self.digital_fll_band_edge_cc_0, 0))
-        self.connect((self.blocks_file_source_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
+        self.connect((self.analog_random_uniform_source_x_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
+        self.connect((self.blocks_head_0, 0), (self.blocks_file_sink_1, 0))
         self.connect((self.blocks_pack_k_bits_bb_0, 0), (self.digital_diff_encoder_bb_0, 0))
         self.connect((self.blocks_repack_bits_bb_0, 0), (self.blocks_pack_k_bits_bb_0, 0))
         self.connect((self.blocks_repack_bits_bb_0_0, 0), (self.digital_crc32_bb_1, 0))
@@ -423,6 +426,7 @@ class MVP(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_stream_to_tagged_stream_1, 0), (self.digital_burst_shaper_xx_0, 0))
         self.connect((self.blocks_tagged_stream_multiply_length_0, 0), (self.blocks_stream_to_tagged_stream_1, 0))
         self.connect((self.blocks_tagged_stream_mux_0_0_0, 0), (self.blocks_repack_bits_bb_0, 0))
+        self.connect((self.blocks_throttle2_0, 0), (self.blocks_head_0, 0))
         self.connect((self.blocks_throttle2_0, 0), (self.channels_channel_model_0, 0))
         self.connect((self.blocks_throttle2_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.blocks_uchar_to_float_0_0_0, 0), (self.qtgui_time_sink_x_0_0, 0))
@@ -464,10 +468,10 @@ class MVP(gr.top_block, Qt.QWidget):
 
     def set_sps(self, sps):
         self.sps = sps
+        self.set_decimation(int(self.sps/2))
         self.set_samp_rate(int(self.datarate*self.sps))
         self.set_signal_lengde(int((self.header_size+self.payload_size_bytes+self.crc_size)*4*self.sps))
-        self.set_taps(self.sps*11)
-        self.qtgui_freq_sink_x_0.set_frequency_range(0, (self.samp_rate/(self.sps/2)))
+        self.set_taps(self.sps*4)
         self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(self.sps, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
         self.root_raised_cosine_filter_0_0.set_taps(firdes.root_raised_cosine(1, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
 
@@ -535,7 +539,7 @@ class MVP(gr.top_block, Qt.QWidget):
     def set_vindu_lengde(self, vindu_lengde):
         self.vindu_lengde = vindu_lengde
         self.set_padding((self.samp_rate/self.pakker_ps-self.signal_lengde-self.vindu_lengde))
-        self.set_vindu_taps([complex(t, t) for t in firdes.window(window.WIN_BLACKMAN, self.vindu_lengde, 0)])
+        self.set_vindu_taps([complex(t, t) for t in firdes.window(window.WIN_HANN, self.vindu_lengde, 0)])
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -543,9 +547,10 @@ class MVP(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.set_padding((self.samp_rate/self.pakker_ps-self.signal_lengde-self.vindu_lengde))
+        self.blocks_head_0.set_length(self.samp_rate)
         self.blocks_throttle2_0.set_sample_rate(self.samp_rate)
         self.qtgui_eye_sink_x_0.set_samp_rate(self.samp_rate)
-        self.qtgui_freq_sink_x_0.set_frequency_range(0, (self.samp_rate/(self.sps/2)))
+        self.qtgui_freq_sink_x_0.set_frequency_range(0, (self.samp_rate/self.decimation))
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
         self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(self.sps, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
@@ -618,6 +623,13 @@ class MVP(gr.top_block, Qt.QWidget):
         self.excess_BW = excess_BW
         self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(self.sps, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
         self.root_raised_cosine_filter_0_0.set_taps(firdes.root_raised_cosine(1, self.samp_rate, (self.samp_rate/self.sps), self.excess_BW, self.taps))
+
+    def get_decimation(self):
+        return self.decimation
+
+    def set_decimation(self, decimation):
+        self.decimation = decimation
+        self.qtgui_freq_sink_x_0.set_frequency_range(0, (self.samp_rate/self.decimation))
 
     def get_QPSK(self):
         return self.QPSK
