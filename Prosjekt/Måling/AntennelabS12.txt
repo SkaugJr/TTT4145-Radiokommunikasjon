@@ -6,6 +6,7 @@ f= 2.425 GHz
 d = 5.20 m
 P_tx = -10 dBm.
 
+Ref = -10 dB
 S12 = -77.5 dB = 10 log( P_rx / P_tx )
 
 Friis Eq.
