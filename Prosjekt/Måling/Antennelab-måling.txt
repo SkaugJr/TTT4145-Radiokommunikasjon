@@ -1,0 +1,15 @@
+Fra VNA: Rohde & Schwartz ZVA 50 VNA 10 MHz - 50 GHz
+Open Kalibrert
+i anechoic kammer. (Antennelabben)
+
+f= 2.425 GHz
+d = 5.20 m
+P_tx = -10 dBm.
+
+S12 = -77.5 dB = 10 log( P_rx / P_tx )
+
+Friis Eq.
+
+G_r*G_t = (P_rx / P_tx) * (4*pi*d f/ c)**2
+
+G_r [dB] + G_t [dB] = -23 dB
