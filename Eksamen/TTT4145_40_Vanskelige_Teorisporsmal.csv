@@ -1,0 +1,41 @@
+Spørsmål,Svar
+"Hva er sammenhengen mellom symbolrate, båndbredde og spektral effektivitet i et kommunikasjonsystem?","Spektral effektivitet = (bitrate / båndbredde). Økt symbolrate øker bitrate, men krever bredere bånd, spesielt ved lav rolloff."
+Hvordan påvirker rolloff-faktor i et RRC-filter både ISI og spektral utstråling?,Lav rolloff gir mindre spektral utstråling men lengre impulssvar og mer sensitivitet for timingfeil.
+Forklar hvorfor matched filtering er optimal i AWGN-kanaler men ikke nødvendigvis i fadingkanaler.,"I AWGN maksimerer matched filtering SNR. I fading kan kanalresponsen forvrenge impulssvar, og matched filter må tilpasses kanalestimat."
+"Hva er funksjonen til et preamble i trådløse systemer, og hvilke egenskaper bør det ha?",Preambler brukes til synkronisering og kanalestimering. Bør ha lav krysskorrelasjon og høy autokorrelasjon.
+Hva menes med koherenstid og hvordan bestemmer den systemdesign i mobile systemer?,Koherenstid er tiden kanalresponsen er stabil. Symboltid må være kortere for å unngå fading innen et symbol.
+"Hvordan brukes en Costas-loop for carriersynkronisering, og hva skjer hvis loop bandwidth er feil justert?",Costas-loop låser på fase. For lav bandwidth gir treg respons; for høy gir ustabilitet og støyfølsomhet.
+Hva er sammenhengen mellom koherensbåndbredde og delay spread i en kanal?,Koherensbåndbredde ≈ 1/(2π * RMS delay spread). Lang delay spread gir smalere båndbredde før fading blir frekvensselektiv.
+"Forklar hvorfor QPSK er mer spektralt effektivt enn BPSK, men har samme BER i AWGN.",QPSK sender 2 bps ved samme symbolrate. BER er lik fordi avstanden mellom symboler i konstellasjonen er samme som BPSK.
+Hva er forskjellen på additive hvit Gaussisk støy (AWGN) og Rayleigh fading?,"AWGN er konstant, uavhengig støy. Rayleigh fading gir stokastisk variasjon i amplitude pga. multibane-interferens."
+"Hvordan fungerer interpolasjon i symbolsynkronisering, og hvorfor er det nødvendig?",Interpolasjon skaper samples mellom eksisterende punkter for å hente ut verdier ved optimal samplingstid.
+Hva er hovedprinsippet bak Frame Synchronization via korrelasjon?,Mottakeren korrelerer signalet med en kjent sekvens og søker etter peak som indikerer starten av rammen.
+"Hva er en ‘eye diagram’, og hva kan det avsløre om et digitalt signal?",Et eye diagram viser overlagrede symbolsperioder. Smalt 'øyne' indikerer ISI og dårlig timingmargin.
+Forklar hvordan symbol timing jitter kan føre til feil selv med matched filtering.,"Jitter gir sampling utenfor optimal punkt – selv om filteret er ideelt, samles ikke signalenergien optimalt."
+Hvordan påvirker kanalens impulsrespons valget av equalizer?,Lang og frekvensselektiv kanalrespons krever DFE eller MLSE. Flat kanal kan håndteres uten eller med lineær EQ.
+Hva er det fysikalske grunnlaget for frekvensselektiv fading?,Ulike refleksjoner har ulike lengder → interferens konstruktiv/destruktiv over frekvensbånd → varierende gain.
+Hva er Doppler-spredning og hvordan påvirker det carrier-synkronisering?,Doppler gir spektral utvidelse som påvirker faselås. Høy doppler gjør carrier-sløyfer ustabile.
+"Hva skiller GMSK fra FSK i praksis, spesielt i forhold til spektral bruk?","GMSK er kontinuerlig fase-FSK med Gaussisk filter, som gir smalere spektrum og lavere sidelobes."
+Hva betyr 'minimum phase' og hvorfor er det viktig i kanaldesign og equalization?,Minimum phase betyr all energi tidlig i impulssvar. Lettere å equalize og gir lavere delay.
+Hvordan estimeres kanalforsinkelse ved hjelp av preamble-korrelasjon?,Ved å korrelere signalet med kjent preamble og måle peakposisjon i tid.
+Hva er den teoretiske begrunnelsen for at DBPSK har 3 dB dårligere BER enn BPSK?,DBPSK bruker differens mellom symboler og akkumulerer faserotasjon og støyeffekter over to symboler.
+"Hva er en Zadoff-Chu sekvens, og hvorfor brukes den i synkronisering?","Den har konstant amplitude og perfekt korrelasjonsegenskap, ideell for timing og frekvensestimering."
+Hva er forskjellen mellom symbol- og framesynkronisering?,Symbolsynkronisering finner korrekt samplingspunkt; framesynkronisering finner starten av pakken.
+Hvordan relaterer Barkerkoder seg til korrelasjonsbasert deteksjon?,"De har lav sidelobe-autokorrelasjon, som gir tydelig deteksjon ved korrelasjon."
+"Hva er årsaken til at MSK har kontinuerlig fase, og hva gir det av fordeler?",MSK er en type FSK med fasedesign som gir ingen diskontinuiteter – gir smalt spektrum.
+Hva er kriteriet for orthogonale frekvenser i FSK for coherent deteksjon?,Minimum frekvensavstand må være 1/2T mellom tonefrekvenser.
+Hvordan gir refleksjon på bakken Plane Earth Loss i stedet for fritegnstap?,Direkte og reflektert signal interfererer – PEL kan gi mer enn 40 dB ekstra tap etter breakpoint.
+Hva er betydningen av Fresnel-soner i radiolinjer?,De definerer områder rundt LoS som må være fri for hindringer for å unngå diffraksjonstap.
+Hvorfor øker fadingmarginen når man ønsker lavere utfallsannsynlighet i store fade?,Fordi større margin trengs for å sikre at selv de dypeste fading-hendelser ikke gir kommunikasjonsbrudd.
+Hva er forskjellen på fast fading og slow fading?,Fast fading skjer over symbolsnivå (multi-path); slow fading skjer over mange symboler (skyggelegging).
+Hvordan påvirker vinkelspredning korrelasjonen mellom antenneelementer i MIMO?,"Stor spredning gir lav korrelasjon, som øker kanalens rank og kapasitet."
+Hvordan estimeres båndbredde i praksis for måling av spektral effektivitet?,Man måler 3 dB eller 99 %-energi bredde og deler bitrate på den.
+Hva er årsaken til at kanalmodellen for GSM bruker Rayleigh eller Rice?,"Mobilmiljø gir mange refleksjoner; LoS gir Rice, mens urban gir Rayleigh."
+Hvordan oppstår Doppler-frekvensen og hva påvirker den?,Bevegelse mellom TX og RX gir frekvensskift: f_D = (v/c)*f_c.
+Hva er Jakes’ modell og hva beskriver den?,Den gir teoretisk Doppler-spektrum for isotropisk spredning i mobilkanal.
+Hva er multipath delay spread og hvorfor er det kritisk i bredbåndsystemer?,Det gir intersymbolinterferens og avgjør behovet for equalizer eller OFDM.
+Hva er sammenhengen mellom kanalens delay spread og systemets koherensbåndbredde?,"Jo større delay spread, jo smalere koherensbåndbredde – det avgjør fadingtype."
+Hva er betydningen av coherence distance?,Avstand der kanalimpulsresponsen fortsatt er korrelert – viktig for spatial diversity.
+Hva menes med channel sounding?,Prosess der man estimerer kanalimpulsresponsen ved å sende kjent testsignal.
+Hvorfor kan OFDM takle frekvensselektiv fading uten equalizer?,Fordi det konverterer kanal til mange flate smalbånds subkanaler.
+Hva er SNR gap og hvordan relaterer det til kanalens kapasitet?,Det er differansen i dB mellom faktisk SNR og ideell Shannon-SNR for gitt BER.

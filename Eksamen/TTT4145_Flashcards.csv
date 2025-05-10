@@ -1,0 +1,41 @@
+Spørsmål,Svar
+Hvorfor valgte dere QPSK som modulasjon?,QPSK gir god spektral effektivitet med moderat kompleksitet og robusthet mot støy.
+Hva er fordelen med differensiell koding i SDR-systemer?,Den eliminerer behovet for absolutt faseinformasjon og forenkler mottak.
+Hvorfor valgte dere en burst-basert transmisjon?,For å redusere interferens og støtte enkel synkronisering i delt spektrum.
+Hvilken funksjon har access code i pakken?,Rammesynkronisering – gjør det mulig å finne starten på en pakke.
+Hva var kriteriene for valg av RRC-filterets rolloff-faktor (α)?,Balansere båndbredde og sidelobebånd – lav α gir smalere spektrum men lengre impulssvar.
+Hvordan bestemte dere symbolsampling-frekvensen (sps)?,Valgt 8 sps for god synkronisering og kompatibilitet med GNU Radio.
+Hvorfor brukes matched filter i mottakeren?,Det maksimerer signal-til-støy-forhold og minimerer ISI.
+Hva er hensikten med phasing-samples i burstforming?,Sikrer myk oppstart og avslutning for å redusere spektralt utslipp og forbedre deteksjon.
+Hva beskytter CRC-feltet i pakken mot?,Bitfeil i payload – muliggjør rask deteksjon og forkasting.
+Hvorfor er burstlengden koblet til duty cycle og symbolrate?,"For å sikre korrekt tidsbruk og overføringsplan, spesielt for begrensede SDR-systemer."
+Hvordan muliggjør systemarkitekturen isolert testing?,Ved å dele i funksjonsblokker som kan testes og debugges separat.
+"Hva slags timing recovery brukes, og hvorfor?",Gardner TED – robust mot støy og enkel å implementere.
+Hvordan bidrar zero-padding til korrekt pakkeform?,Sikrer riktig burstlengde og gjør at burstene ikke overlapper.
+Hvilke SDR-spesifikke begrensninger måtte dere ta hensyn til?,"Frekvenspresisjon, lav sendereffekt, samplingsrate og latency."
+Hvordan håndterer systemet oscillatoravvik på ±25 ppm?,FLL brukes for grov frekvenssynkronisering før carrier loop.
+Hvorfor er differensiell dekoding etter konstellasjonsdekoding?,Fordi faseinformasjon gjenopprettes etter symbolbeslutning.
+Hvordan kunne feil i carrier-synkronisering påvirke ytelsen?,"Rotert konstellasjon, høy BER eller mistet synkronisering."
+Hvilken effekt har filtertaps på impulssvaret og burstlengde?,Lengre filter gir bredere impulssvar og øker burstvarighet.
+Hva ville skjedd med dårlig access code?,"Feilaktige deteksjoner, dårlig synkronisering og økt PLR."
+Hvordan ville coherent detection forbedret systemet?,Lavere BER – men krever stabil carrier-synk og høyere kompleksitet.
+Hva er forskjellen mellom BER og PLR?,"BER måler bitfeilrate, PLR måler hvor mange hele pakker som går tapt."
+Hva er Eb/N₀?,Energi per bit over støyens spektraltetthet – standard måltall for digital systemytelse.
+Hva er flat fading?,Når alle frekvenser i signalet opplever samme fading – kanal er flat i spektrum.
+Hva gjør matched filter optimalt?,Det maksimerer SNR ved korrekt sampling etter pulsforming.
+Hva er koherensbåndbredde?,Frekvensbåndet der fadingen er korrelert – viktig for vurdering av frekvensselektivitet.
+Hva sier Nyquist-kriteriet?,For ISI-fri overføring må signalet samples minst 2 ganger båndbredden.
+Hva er rammesynkronisering?,Finne startpunktet for en pakke ved hjelp av kjente koder (f.eks. access code).
+Hvordan påvirker dopplerskift symbolsynkronisering?,Rask endring i fase kan forskyve optimal samplingstid og låse ut sløyfer.
+Hvorfor gir Rayleigh-kanaler eksponentiell SNR-fordeling?,"Fordi amplituden følger Rayleigh, og kvadrert Rayleigh gir eksponentiell effekt."
+Hvordan påvirker kanaltid variasjon symbolrate?,Høy symbolrate krever kortere koherenstid – mer følsom for fading.
+Hva er fordeler og ulemper med lav rolloff?,Smalt spektrum men lengre impulssvar og potensiell ISI.
+Hvordan estimeres linkmargin?,Forskjellen mellom oppnådd Eb/N₀ og krav for ønsket BER.
+Hva er coherent vs non-coherent detection?,"Coherent bruker fasereferanse, non-coherent gjør det ikke – enklere men høyere BER."
+Hva gjør Gardner TED?,Bruker interpolasjon og feilmåling mellom samples for timing-synkronisering.
+Hvordan påvirker impulsrespons frekvensrespons og BER?,Lang impulssvar gir smal spektrum men potensielt ISI – påvirker BER.
+Hva er autocorrelasjonsegenskaper viktige for i koder?,Gir tydelig peak ved korrelasjon – god for synkronisering.
+Når trenger man equalizer?,Når man har frekvensselektiv fading eller lang impulssvar – for å motvirke ISI.
+Hva er dopplerspekterets effekt på koherenstid?,Bredt dopplerspekter gir kort koherenstid og raskt varierende kanal.
+Hva er Jakes’ modell?,Beskriver dopplerspekter og korrelasjon ved isotropisk fading.
+Hvorfor bruker man matched filter etter downsampling?,For å redusere kompleksitet – man filtrerer etter nedsampling for lavere krav til prosessering.

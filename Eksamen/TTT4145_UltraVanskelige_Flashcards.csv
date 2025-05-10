@@ -1,0 +1,21 @@
+Spørsmål,Svar
+Hvordan påvirker en feil i symbol timing recovery både BER og synkroniseringssløyfer nedstrøms?,"Feil timing gir ISI, reduserer SNR i symbolbeslutning, og kan forstyrre carrier-synkronisering via sløyfefeil i Costas loop."
+Hva skjer om det er mismatch mellom pulsformingsfilteret i sender og matched filter i mottaker?,"Nyquist-kriteriet brytes, noe som fører til residual ISI og økt BER selv med korrekt samplingstid."
+Hvordan påvirker en høy Doppler-spredning koherenstiden og beslutningsrobustheten i et SDR-system?,"Koherenstiden reduseres, noe som kan gjøre sløyfer som FLL og Costas ustabile og gir faseavvik mellom symboler."
+Forklar hvordan sidelobene i frekvensdomene relaterer seg til pulsbredde og impulsrespons i tidsdomene.,"Smale pulser i tid → brede spektrale sidelober (sinc-liknende), mens lange pulser gir smalere, men mer overlappende spektrum."
+"Hvorfor kan differensiell dekoding fortsatt feile ved fasehopp på ±π, selv om den eliminerer fasetvetydighet?",Fordi differensiell dekoding antar liten kontinuerlig endring; et brått π-fasehopp skifter symboltolkningen og gir feil i hele sekvensen.
+Hvordan endres systemets følsomhet for ISI når rolloff-faktoren i RRC-filteret nærmer seg 0?,"Filteret nærmer seg en ideal sinc – ISI nulles teoretisk, men krever perfekt synkronisering; ellers øker ISI dramatisk."
+"Hvorfor gir et ideelt Nyquist-filter perfekt ISI-kansellering, men er upraktisk i virkelige systemer?","Det har uendelig impulssvar (sinc), som ikke kan implementeres digitalt; trunkering introduserer igjen ISI."
+Hvordan påvirker filtertaps lengden på burstene i et SDR-system og systemets latency?,"Lengre filter gir lengre burstoppstart og -avslutning (flere samples med energi), noe som øker latency og 'burst-overhead'."
+Forklar hvordan FLL og Costas loop samarbeider i et SDR-system og hva som skjer hvis én av dem feiler.,"FLL gir grov carrier-synk; Costas loop finjusterer fase. Hvis FLL feiler, starter Costas feil; hvis Costas feiler, mister man konstellasjonen."
+Hvordan påvirker sampling offset (f.eks. 0.2 symbolsforskyvning) amplituden i symbolbeslutningen etter matched filter?,"Energien ved sampling reduseres; pulsens hovedpeak utnyttes ikke, og SNR for deteksjon reduseres → høyere BER."
+Hvordan estimeres Eb/N0 i et SDR-system uten kjent senderstyrke eller kjent kanalrespons?,Ved å måle mottatt signal- og støyeffekt etter matched filtering og anta kjent symbolrate og båndbredde.
+Hva er sammenhengen mellom frekvensselektiv fading og filterdesign i bredbåndsystemer?,Ved frekvensselektiv fading må filteret motvirke kanalens frekvensvariasjon; ellers får man amplitude- og fasereforvrengning.
+Hvordan påvirker symbol timing jitter ytelsen i en symbolsynkronisert mottaker?,"Timing jitter gir usikre samplingspunkter, og dermed varierende ISI per symbol; gir SNR-reduksjon og ustabil BER."
+Hvorfor må RRC-filterets rolloff og filterlengde balanseres i mobile systemer?,Lav rolloff krever lengre filter (flere taps) for å undertrykke sidelober; men lang filterlengde øker latency og sensitivitet for fading.
+Hvordan kan en mismatch i sps (samples per symbol) mellom sender og mottaker føre til systemisk feil?,"Sampleraten i Rx vil ikke matche symbolstrukturen – symbolsync og matched filter opererer feil, gir dekodingsfeil og mistet synk."
+Hvordan kan noise folding oppstå i SDR-systemer med for lav samplingsrate etter mixing?,"Hvis sampling skjer nær Nyquist-grense, foldes høyfrekvent støy ned i basebånd → SNR degraderes."
+Hvordan brukes autocorrelasjonsanalyse til å validere rammesynkroniseringens ytelse?,Ved å analysere peak sharpness og false peak-rate i korrelasjonsfunksjonen mot access code i støyfylte signal.
+Hvorfor kan PLL-instabilitet forårsaket av doppler skape intermitterende symbolrotasjon i QPSK?,"Doppler gir kontinuerlig frekvensavvik; en treg PLL vil ikke følge, noe som fører til roterende konstellasjon og feil beslutninger."
+Hvordan kan man bruke spektrumanalyse for å validere RRC-filterets ytelse praktisk?,"Ved å måle -3 dB og -15 dB båndbredde, samt sidetoppdemping (dBc) – og sammenligne med teoretisk forventet spektrum."
+"Hva er sammenhengen mellom symbolrate, sps og matched filterets 'sharpness'?","Høyere sps gir bedre oppløsning i matched filter, men krever flere taps for samme symboldekning og høyere samplingsrate."
